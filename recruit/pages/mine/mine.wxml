@@ -9,23 +9,86 @@
             <image 
                 class="avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/n7pl10NRqpZqvNhQKtOQwlyUqmjB1RY2obJh0g5Cic4WRfFNx5mxAjchpMYbTsKpJIqW9jnIOfQJKqF3USxSULg/132">
             </image>
-            <!-- 用户名 -->
-            <text class="username">
+            <view class="con2">
+                <view class="con1">
+                <!-- 用户名 -->
+                <text class="username">
                 姓名待填写
-            </text>
-            <!-- 修改资料图标 -->
-            <text iconfont>
-
-            </text>
-            <!-- 其他个人资料包裹器 -->
-            <view class="otherInfoBox">
-
+                </text>
+                <!-- 修改资料图标 -->
+                <text class="iconfont icon-xiugai  xiugai">
+                </text>
+                
+                </view>
+                <view class="con3">
+                    <view class="con4">
+                        <!-- 公司职位信息填写 -->
+                        <text class="infocompany">公司职位信息待填写</text>
+                        <!-- 公司职位信息填写 -->
+                        <text class="infoperson">个人信息待填写</text>
+                    </view>
+                     
+                    <view class="resumeChangeBack">
+                        <text class="iconfont icon-gongwenbao gongwenbao"></text>
+                        <text class="rctext">简历修改</text>
+                    </view>
+                </view>
             </view>
         </view>
-        
+        <view class="buildResume">
+            <text class="r1text">创建简历，高薪工作来找你</text>
+            <view class="buildBack">
+                <text class="r2text">去修改></text>
+            </view>
+        </view>
     </view>
+    
     <!-- 头部绿色背景 -->
     <view class="headBackground">
     </view>
-   
+
+   <!-- 中部样式 -->
+    <view class="jobResult">
+        <text class="jobResultTitle">求职/雇佣进程</text>
+        <view class="resultContainer">
+            <view class="rCon">
+                <text class="iconfont icon-xiaoxi1 iconResult"></text>
+                <text class="resultText">已沟通</text>
+            </view>
+            <view class="rCon">
+                <text class="iconfont icon-flow-others iconResult"></text>
+                <text class="resultText">已沟通</text>
+                
+            </view>
+            <view class="rCon">
+                <text class="iconfont icon-icon-- iconResult"></text>
+                <text class="resultText">已沟通</text>
+            </view>
+        </view>
+    </view>
+    <!-- /* 中下部样式 */ -->
+    <view class="historyBack">
+        <text class="iconfont icon-shoe-print iconHitsoty"></text>
+        <text class="histoyText">浏览历史</text>
+    </view>
+    <view class="collectionBack">
+        <text class="iconfont icon-shoucang iconCollection"></text>
+        <text class="collectionText">我的收藏</text>
+    </view>
+    <!-- 下部样式 -->
+    <view class="myServe">
+        <text class="myServeTitle">我的服务</text>
+        <view class="myServeContainer">
+            <view class="mCon">
+                <text class="iconfont icon-shezhi iconMyserve"></text>
+                <text class="myServeText">设置</text>
+            </view>
+            <view class="mCon">
+                <text class="iconfont icon-neizhaorencaiku iconMyserve"></text>
+                <text class="myServeText">招人</text>   
+            </view>
+        </view>
+    </view>
 </view>
+
+
