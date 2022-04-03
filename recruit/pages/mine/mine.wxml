@@ -1,0 +1,31 @@
+<!--pages/mine/mine.wxml-->
+
+<view class="headContainer">
+    <!-- 个人资料框 -->
+    <view class="Container">
+        <!-- 个人资料包裹器 -->
+        <view class="userInfoBox">
+            <!-- 头像 -->
+            <image 
+                class="avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/n7pl10NRqpZqvNhQKtOQwlyUqmjB1RY2obJh0g5Cic4WRfFNx5mxAjchpMYbTsKpJIqW9jnIOfQJKqF3USxSULg/132">
+            </image>
+            <!-- 用户名 -->
+            <text class="username">
+                姓名待填写
+            </text>
+            <!-- 修改资料图标 -->
+            <text iconfont>
+
+            </text>
+            <!-- 其他个人资料包裹器 -->
+            <view class="otherInfoBox">
+
+            </view>
+        </view>
+        
+    </view>
+    <!-- 头部绿色背景 -->
+    <view class="headBackground">
+    </view>
+   
+</view>

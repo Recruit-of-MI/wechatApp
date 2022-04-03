@@ -1,0 +1,12 @@
+
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <van-button type="primary" round custom-class="login_button" size="normal" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserinfo">获取用户信息</van-button>
+    </block>
+    <block wx:else>
+      <image  bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>

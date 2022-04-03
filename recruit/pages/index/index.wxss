@@ -1,0 +1,14 @@
+.login_button{
+    margin-top: 300rpx;
+}
+.userinfo{
+    display:grid
+}
+.userinfo .userinfo-avatar{
+    width: 200rpx;
+    height: 200rpx;
+}
+.userinfo  .userinfo-nickname{
+    margin-top: 20rpx;
+    text-align: center;
+}
