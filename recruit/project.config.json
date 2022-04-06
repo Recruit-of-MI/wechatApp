@@ -39,7 +39,7 @@
         "showES6CompileOption": false
     },
     "compileType": "miniprogram",
-    "libVersion": "2.19.6",
+    "libVersion": "2.19.3",
     "appid": "wxcf656011d7b5d042",
     "projectname": "recruit",
     "debugOptions": {

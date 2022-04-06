@@ -1,1 +1,171 @@
 /* pages/position/position.wxss */
+/* 红色头部 */
+.positionContainer{
+    width: 100%;
+    height: 100%;
+}
+.positionContainer .headBackground{
+    display: grid;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 250rpx;
+    /* background-color: #33CC66; */
+    background: -webkit-linear-gradient(left,rgb(235, 104, 104),rgb(207, 68, 68),rgb(146, 23, 14));
+}
+.Con1{
+    display: flex;
+}
+.iconCon1{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    color: #fff;
+}
+.Con1Text1{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 27rpx;
+    margin-left: 3rpx;
+    color: #fff;
+}
+.Con1Text2{
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 27rpx;
+    margin-left: 140rpx;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style:italic;
+    text-shadow: 10px 10px 10px rgb(44, 43, 43);
+    color: #fff;
+}
+.searchSlot{
+    color: #fff;
+    font-weight: 600;
+}
+/* 5个图标区域 */
+.naviContainer{
+    display: flex;
+    width: 94%;
+    margin-left: 3%;
+}
+.naviItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+.naviItem .iconfont{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100rpx;
+    background: rgb(207, 68, 68);
+    font-size: 50rpx;
+    color: #fff;
+    margin: 20rpx 0;
+}
+.naviItem text{
+    font-size: 26rpx;
+    font-weight: 600;
+}
+/* 热门职位板块 */
+.hotBackground{
+    display: grid;
+    width: 94%;
+    height: 280rpx;
+    margin-left: 3%;
+    margin-top: 40rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 20rpx;
+    background-color:#EFF7EF;
+}
+.hotCon1{
+    display: flex;
+}
+.hotCon1Text1{
+    font-size: 30rpx;
+    margin-top: 14rpx;
+    margin-left: 20rpx;
+    font-weight: 600;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.hotCon1Text2{
+    font-size: 23rpx;
+    margin-top: 22rpx;
+    margin-left: 20rpx;
+    font-weight: 600;
+    color: rgb(196, 190, 190);
+    font-family:cursive;
+}
+.hotCon2{
+    display: flex;
+}
+.hotCon2Back1{
+    display: grid;
+    width: 120rpx;
+    height: 140rpx;
+    margin-left: 30rpx;
+    margin-top: 10rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 20rpx;
+    background-color:#ECB5B5;
+}
+.hotCon2Back1Text1{
+    font-size: 24rpx;
+    margin-top: 30rpx;
+    text-align: center;
+    color: #fff;
+}
+.hotCon2Back1Text2{
+    font-size: 22rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.hotCon2Back2{
+    display: grid;
+    width: 120rpx;
+    height: 140rpx;
+    margin-left: 50rpx;
+    margin-top: 10rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 20rpx;
+    background-color:#DB3C3C;
+}
+.hotCon2Back2Text1{
+    font-size: 24rpx;
+    margin-top: 30rpx;
+    text-align: center;
+    color: #fff;
+}
+.hotCon2Back2Text2{
+    font-size: 22rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.hotCon2Back3{
+    display: grid;
+    width: 295rpx;
+    height: 140rpx;
+    margin-left: 50rpx;
+    margin-top: 10rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 20rpx;
+    background-color:#6797E1;
+}
+.hotCon2Back3Text1{
+    font-size: 24rpx;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    color: #fff;
+}
+.hotCon2Back3Text2{
+    font-size: 22rpx;
+    margin-left: 30rpx;
+    color: #fff;
+}
+/* 猜你喜欢板块 */

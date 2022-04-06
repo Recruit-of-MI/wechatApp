@@ -1,2 +1,77 @@
 <!--pages/position/position.wxml-->
-<text>pages/position/position.wxml</text>
+<!-- 职位页面包裹器 -->
+<view class="positionContainer">
+    
+   
+    <!-- 头部红色背景 -->
+    <view class="headBackground">
+        <!-- 上部 -->
+        <view class="Con1">
+            <text class="iconfont icon-dingwei iconCon1"></text>
+            <text class="Con1Text1">杭州</text>
+            <text class="Con1Text2">开工大吉</text>
+        </view>
+        <!-- 下部 -->
+        <view class="Con2">
+            <!-- 搜索框 -->
+            <van-search
+            value="{{ value }}"
+            placeholder="请输入职位或关键词"
+            shape="round"
+            background="rgb(207, 68, 68)"
+            use-action-slot
+            bind:change="onChange"
+            bind:search="onSearch"
+            >
+  <view slot="action" bind:tap="onClick" class="searchSlot">搜索</view>
+</van-search>
+        </view>
+    </view>
+
+    <!-- 五个图标导航区域 -->
+    <view class="naviContainer">
+        <view class="naviItem" >
+            <text class="iconfont icon-fujin"></text>
+            <text>附近急招</text>
+        </view>
+        <view class="naviItem" >
+            <text class="iconfont icon-fangdajing"></text>
+            <text>今日急招</text>
+        </view>
+        <view class="naviItem">
+            <text class="iconfont icon-siji-"></text>
+            <text>司机</text>
+        </view>
+        <view class="naviItem">
+            <text class="iconfont icon-qiandai"></text>
+            <text>日结专区</text>
+        </view>
+        <view class="naviItem">
+            <text class="iconfont icon-quanbu"></text>
+            <text>全部</text>
+        </view>
+    </view>
+    <!-- 热门职位板块 -->
+    <view class="hotBackground">
+        <!-- 上部 -->
+        <view class="hotCon1">
+            <text class="hotCon1Text1">热门职位</text>
+            <text class="hotCon1Text2">超多名企好职位</text>
+        </view>
+        <!-- 下部 -->
+        <view class="hotCon2">
+            <view class="hotCon2Back1">
+                <text class="hotCon2Back1Text1">食宿话补</text>
+                <text class="hotCon2Back1Text2">职位热招中</text>
+            </view>
+            <view class="hotCon2Back2">
+                <text class="hotCon2Back2Text1">高薪职位</text>
+                <text class="hotCon2Back2Text2">直招好工作</text>
+            </view>
+            <view class="hotCon2Back3">
+                <text class="hotCon2Back3Text1">名企专区</text>
+                <text class="hotCon2Back3Text2">超多名企等你选</text>
+            </view>
+        </view>
+    </view>
+</view>

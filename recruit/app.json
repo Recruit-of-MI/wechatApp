@@ -1,8 +1,8 @@
 {
     "pages": [
+        "pages/position/position",
         "pages/mine/mine",
         "pages/index/index",
-        "pages/position/position",
         "pages/news/news"
     ],
     "window": {
