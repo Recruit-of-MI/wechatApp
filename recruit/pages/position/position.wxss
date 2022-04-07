@@ -169,3 +169,142 @@
     color: #fff;
 }
 /* 猜你喜欢板块 */
+.guessLikeBackground{
+    display: grid;
+    width: 94%;
+    height:fit-content;
+    margin-left: 3%;
+    margin-top: 40rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 20rpx;
+}
+.GLCon1{
+    display: flex;
+}
+.GLCon1Text1{
+    margin-top: 14rpx;
+    margin-left: 30rpx;
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.GLCon1Text2{
+    margin-top: 16rpx;
+    margin-left: 430rpx;
+    font-size: 26rpx;
+}
+.GLCon2{
+    display: flex;
+}
+.GLCon2Back1{
+    display: flex;
+    width: 80rpx;
+    height: 30rpx;
+    margin-left: 30rpx;
+    margin-top: 40rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 10rpx;
+    background-color:#D7F9E1;
+}
+.GLCon2Back1Text1{
+    font-size: 24rpx;
+    margin-left: 16rpx;
+    color: #0D8430;
+}
+.GLCon2Back2{
+    display: flex;
+    width: 80rpx;
+    height: 30rpx;
+    margin-left: 30rpx;
+    margin-top: 40rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 10rpx;
+    background-color:#E1DFDF;
+}
+.GLCon2Back2Text1{
+    font-size: 24rpx;
+    margin-left: 16rpx;
+    color: #000;
+}
+.GLCon2Text1{
+    font-size: 38rpx;
+    margin-top: 36rpx;
+    margin-left: 350rpx;
+}
+.GlCon2Text2{
+    font-size: 24rpx;
+    margin-top: 40rpx;
+}
+/* scroll */
+.scrollContaier{
+    margin-top: 30rpx;
+    height: 600rpx;
+    width: 100%;
+}
+.scrollItem{
+    display: grid;
+    margin-bottom: 20rpx;
+    margin-top: 20rpx;
+}
+.scrollItemText{
+    font-size: 32rpx;
+    font-weight: 600;
+    margin-left: 30rpx;
+}
+.scrollItemCon1{
+    display: flex;
+}
+.scrollItemCon1Text1{
+    margin-left: 30rpx;
+    margin-top: 10rpx;
+    color: #2ED532;
+}
+.scrollItemCon1Text2{
+    font-size: 24rpx;
+    margin-left: 15rpx;
+    margin-top: 15rpx;
+    color: #000;
+}
+.scrollItemCon1Text3{
+    font-size: 24rpx;
+    margin-left: 140rpx;
+    margin-top: 15rpx;
+    color: #000;
+}
+.scrollItemBack{
+    display: flex;
+    width: 80rpx;
+    height: 30rpx;
+    margin-left: 30rpx;
+    margin-top: 10rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 10rpx;
+    background-color:#F9F7F7;
+}
+.scrollItemBackText{
+    font-size: 24rpx;
+    margin-left: 16rpx;
+    color: #000;
+}
+.scrollItemCon3{
+    display: flex;
+}
+.scrollItemCon3Text1{
+    font-size: 24rpx;
+    margin-top: 10rpx;
+    margin-left: 30rpx;
+}
+.scrollItemCon3Back{
+    display: flex;
+    width: 60rpx;
+    height: 30rpx;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 10rpx;
+    background-color:#FFFAE3;
+}
+.scrollItemCon3BackText{
+    font-size: 24rpx;
+    margin-left: 6rpx;
+    color: #D5C621;
+}
