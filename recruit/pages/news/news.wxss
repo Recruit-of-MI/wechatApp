@@ -1,1 +1,130 @@
 /* pages/news/news.wxss */
+/* .tabs{
+    width: 400rpx;
+    margin-top: 50rpx;
+}
+.tabsText{
+    font-size: 40rpx;
+} */
+
+/* 标签页导航 */
+.tabsPick{
+    display: flex;
+}
+
+/* 消息点击 */
+.tabsPickCon1{
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    margin-bottom: 50rpx;
+    display: grid;
+}
+.tabsPickCon1Text1{
+    font-size: 44rpx;
+    font-weight: 600;
+}
+.tabsPickCon1Line1{
+    width:88rpx;
+    height:6rpx;
+    background:#33CC66;
+}
+
+/* 消息未点击 */
+.tabsPickCon1s{
+    margin-top: 35rpx;
+    margin-left: 30rpx;
+    margin-bottom: 50rpx;
+    display: grid;
+}
+.tabsPickCon1Text1s{
+    font-size: 34rpx;
+    font-weight: 200;
+}
+.tabsPickCon1Lines{
+    width:0rpx;
+    height:6rpx;
+    background:#33CC66;
+}
+
+/* 面试点击 */
+.tabsPickCon2{
+    margin-top: 30rpx;
+    margin-left: 60rpx;
+    margin-bottom: 50rpx;
+    display: grid;
+}
+.tabsPickCon2Text1{
+    font-size: 44rpx;
+    font-weight: 600;
+}
+.tabsPickCon2Line1{
+    width:88rpx;
+    height:6rpx;
+    background:#33CC66;
+}
+
+/* 面试未点击 */
+.tabsPickCon2s{
+    margin-top: 35rpx;
+    margin-left: 60rpx;
+    margin-bottom: 50rpx;
+    display: grid;
+}
+.tabsPickCon2Text1s{
+    font-size: 34rpx;
+    font-weight: 200;
+}
+.tabsPickCon2Line1s{
+    width:0rpx;
+    height:6rpx;
+    background:#33CC66;
+}
+/* 消息列表 */
+.messageListContainer{
+    margin-top: 10rpx;
+    width: 100%;
+    height: 140rpx;
+    display: flex;
+}
+.messageListContainerAvatar{
+    margin-top: 20rpx;
+    margin-left: 30rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50% 50% 50% 50%;
+}
+/* 昵称&最后一条消息&分割线 */
+.MLCon1{
+    width: 400rpx;
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    display: grid;
+}
+.MLCon1Text1{
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.MLCon1Text2{
+    font-size: 26rpx;
+    /* 单行文本溢出 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+/* 最后发言时间 */
+.MLCon2{
+    display: flex;
+    margin-top: 55rpx;
+    margin-left: 80rpx;
+}
+.MLCon2Text1{
+    font-size: 30rpx;
+    color: #959494;
+}
+.Line1{
+    width:80%;
+    margin-left: 20%;
+    height:2rpx;
+    background:#d3d1d1;
+}

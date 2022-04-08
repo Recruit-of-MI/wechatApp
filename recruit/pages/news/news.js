@@ -4,17 +4,33 @@ Page({
     /**
      * 页面的初始数据
      */
-    data: {
+   
 
+    data:{
+      isChecked1:true,
+      isChecked2:false,
+      MessageList1:6,
+      MessageList2:2,
     },
-
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        
     },
 
+    messageBind(){
+        this.setData({
+            isChecked1:true,
+            isChecked2:false
+        })
+    },
+    interviewBind(){
+        this.setData({
+            isChecked1:false,
+            isChecked2:true
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -26,7 +42,11 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        // 再次进入页面首选“消息”标签
+        // this.setData({
+        //     isChecked1:true,
+        //     isChecked2:false
+        // })
     },
 
     /**

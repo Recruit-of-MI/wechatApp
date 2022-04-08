@@ -1,9 +1,10 @@
 {
     "pages": [
+        "pages/news/news",
         "pages/position/position",
         "pages/mine/mine",
-        "pages/index/index",
-        "pages/news/news"
+        "pages/index/index"
+        
     ],
     "window": {
         "backgroundTextStyle": "light",

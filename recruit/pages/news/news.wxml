@@ -1,2 +1,51 @@
 <!--pages/news/news.wxml-->
-<text>pages/news/news.wxml</text>
+<!-- 标签页导航 -->
+<view class="tabsPick">
+    <view class="{{isChecked1?'tabsPickCon1':'tabsPickCon1s'}}" bindtap="messageBind">
+        <text class="{{isChecked1?'tabsPickCon1Text1':'tabsPickCon1Text1s'}}">消息</text>
+        <view class="{{isChecked1?'tabsPickCon1Line1':'tabsPickCon1Line1s'}}"></view>
+    </view>
+    <view class="{{isChecked2?'tabsPickCon2':'tabsPickCon2s'}}" bindtap="interviewBind">
+        <text class="{{isChecked2?'tabsPickCon2Text1':'tabsPickCon2Text1s'}}">面试</text>
+        <view class="{{isChecked2?'tabsPickCon2Line1':'tabsPickCon2Line1s'}}"></view>
+    </view>
+</view>
+<!-- 消息 消息列表 -->
+<view wx:if="{{isChecked1}}" wx:for="{{MessageList1}}">
+    <view class="messageListContainer" >
+    <!-- 头像 -->
+    <image class="messageListContainerAvatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/n7pl10NRqpZqvNhQKtOQwlyUqmjB1RY2obJh0g5Cic4WRfFNx5mxAjchpMYbTsKpJIqW9jnIOfQJKqF3USxSULg/132">
+    </image>
+    <!-- 昵称&最后一条消息 -->
+    <view class="MLCon1">
+        <text class="MLCon1Text1">张三</text>
+        <text class="MLCon1Text2">我们公司也收小白,你可以提前来我们公司实习体验。</text>
+    </view>
+    <!-- 最后发言时间 -->
+    <view class="MLCon2">
+        <text class="MLCon2Text1">12:09</text>
+    </view>
+    </view>
+    <view class="Line1"></view>
+</view>
+
+<!-- 面试 消息列表列 -->
+<view wx:if="{{isChecked2}}" wx:for="{{MessageList2}}">
+    <view class="messageListContainer" >
+    <!-- 头像 -->
+    <image class="messageListContainerAvatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/n7pl10NRqpZqvNhQKtOQwlyUqmjB1RY2obJh0g5Cic4WRfFNx5mxAjchpMYbTsKpJIqW9jnIOfQJKqF3USxSULg/132">
+    </image>
+    <!-- 昵称&最后一条消息 -->
+    <view class="MLCon1">
+        <text class="MLCon1Text1">张三</text>
+        <text class="MLCon1Text2">我们公司也收小白,你可以提前来我们公司实习体验。</text>
+    </view>
+    <!-- 最后发言时间 -->
+    <view class="MLCon2">
+        <text class="MLCon2Text1">12:09</text>
+    </view>
+    </view>
+    <view class="Line1"></view>
+</view>
+
+
