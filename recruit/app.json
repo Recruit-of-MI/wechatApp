@@ -1,10 +1,18 @@
 {
     "pages": [
-        "pages/news/news",
+        "pages/PositionAbout/navigation/navigation",
         "pages/position/position",
         "pages/mine/mine",
-        "pages/index/index"
         
+        "pages/news/news",
+        
+        "pages/index/index",
+        
+        "pages/PositionAbout/search/search",
+        "pages/PositionAbout/whole/whole",
+        "pages/PositionAbout/jrjz/jrjz",
+        "pages/PositionAbout/fjjz/fjjz",
+        "pages/PositionAbout/rjzq/rjzq"
     ],
     "window": {
         "backgroundTextStyle": "light",

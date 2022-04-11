@@ -8,13 +8,13 @@
         <!-- 上部 -->
         <view class="Con1">
             <text class="iconfont icon-dingwei iconCon1"></text>
-            <text class="Con1Text1">杭州</text>
+            <text class="Con1Text1" bindtap="toNavigation">江干区</text>
             <text class="Con1Text2">开工大吉</text>
         </view>
         <!-- 下部 -->
         <view class="Con2">
             <!-- 搜索框 -->
-            <van-search
+            <van-search bindtap="toSearch"
             value="{{ value }}"
             placeholder="请输入职位或关键词"
             shape="round"
@@ -30,7 +30,7 @@
 
     <!-- 五个图标导航区域 -->
     <view class="naviContainer">
-        <view class="naviItem" >
+        <view class="naviItem" bindtap="toFjjz" >
             <text class="iconfont icon-fujin"></text>
             <text>附近急招</text>
         </view>

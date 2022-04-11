@@ -4,16 +4,16 @@
     <!-- 个人资料框 -->
     <view class="Container">
         <!-- 个人资料包裹器 -->
-        <view class="userInfoBox">
+        <view class="userInfoBox" bindtap="getUserinfo">
             <!-- 头像 -->
             <image 
-                class="avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/n7pl10NRqpZqvNhQKtOQwlyUqmjB1RY2obJh0g5Cic4WRfFNx5mxAjchpMYbTsKpJIqW9jnIOfQJKqF3USxSULg/132">
+                class="avatar" src='{{userInfo.avatarUrl?userInfo.avatarUrl:"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Ffb9431a4c99691e54952d85ed034faf9a6b7e4f22d45-xy5FHF_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652266099&t=a14622970b9f064bc7f4f1497399756c"}}'>
             </image>
             <view class="con2">
                 <view class="con1">
                 <!-- 用户名 -->
                 <text class="username">
-                姓名待填写
+                {{userInfo.nickName?userInfo.nickName:'姓名待填写'}}
                 </text>
                 <!-- 修改资料图标 -->
                 <text class="iconfont icon-xiugai  xiugai">
