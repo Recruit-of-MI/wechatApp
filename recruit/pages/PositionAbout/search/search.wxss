@@ -1,1 +1,49 @@
 /* pages/search/search.wxss */
+.searchHistory{
+    display: grid;
+}
+.searchHistoryCon1{
+    display: flex;
+}
+.searchHistoryCon1Text1{
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+}
+.searchHistoryCon1icon1{
+    margin-top: 39rpx;
+    margin-left: 510rpx;
+    font-size: 36rpx;
+    font-weight: 600;
+}
+.searchHistoryBack{
+    display: flex;
+    width:fit-content;
+    height: 35rpx;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 18rpx;
+    background-color:#E1DFDF;
+}
+.searchHistoryBackText{
+    font-size: 26rpx;
+    color: #000;
+}
+/* 热门搜索 */
+.searchHot{
+    display: grid;
+}
+.searchHotCon1{
+    display: grid;
+}
+.seachHotCon2{
+    display: flex;
+}
+.searchHotCon1Text1{
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+}

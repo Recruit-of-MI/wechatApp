@@ -1,18 +1,17 @@
 {
     "pages": [
-        "pages/PositionAbout/navigation/navigation",
+        "pages/jobDetail/jobDetail",
         "pages/position/position",
-        "pages/mine/mine",
-        
-        "pages/news/news",
-        
-        "pages/index/index",
-        
+        "pages/PositionAbout/fjjz/fjjz",
         "pages/PositionAbout/search/search",
+        "pages/PositionAbout/navigation/navigation",
+        "pages/mine/mine",
+        "pages/news/news",
+        "pages/index/index",
         "pages/PositionAbout/whole/whole",
         "pages/PositionAbout/jrjz/jrjz",
-        "pages/PositionAbout/fjjz/fjjz",
         "pages/PositionAbout/rjzq/rjzq"
+        
     ],
     "window": {
         "backgroundTextStyle": "light",

@@ -1,0 +1,79 @@
+/* pages/jobDetail/jobDetail.wxss */
+.jobDetailContainer{
+    display: grid;
+}
+/* 工作介绍 */
+.jobIntroduction{
+    display: grid;
+}
+/* 工作名称和薪资 */
+.JICon1{
+    display: flex;
+}
+.JICon1Text1{
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+}
+.JICon1Text2{
+    font-size: 32rpx;
+    font-weight: 600;
+    margin-top: 70rpx;
+    margin-left: 280rpx;
+    color: #FF9600;
+}
+/* 位置和学历要求 */
+.JICon2{
+    display: flex;
+}
+.JICon2Text1{
+    font-size: 28rpx;
+    margin-left: 30rpx;
+}
+.JICon2Text2{
+    font-size: 28rpx;
+    margin-left: 80rpx;
+}
+/* 经理头像&名字&职位 */
+.JICon3{
+    display: flex;
+}
+.JICon3Avatar{
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50% 50% 50% 50%;
+}
+.JICon3Con1{
+    display: grid;
+}
+.JICon3Con1Con1{
+    display: flex;
+    margin-top: 30rpx;
+    margin-left: 20rpx;
+}
+.JICon3Con1Con1Text1{
+    font-size: 28rpx;
+    font-weight: 600;
+}
+.JICon3Con1Con1Text2{
+    font-size: 28rpx;
+    margin-left: 50rpx;
+}
+.JICon3Con1Con2{
+    display: flex;
+    margin-left: 20rpx;
+    margin-top: 8rpx;
+}
+.JICon3Con1Con2Text1{
+    font-size: 28rpx;
+}
+.jobIntroductionLine{
+    margin-top: 30rpx;
+    width:90%;
+    margin-left: 5%;
+    height:2rpx;
+    background:#d3d1d1;
+}

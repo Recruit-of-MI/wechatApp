@@ -1,0 +1,35 @@
+<!--pages/jobDetail/jobDetail.wxml-->
+<!-- 工作详情包裹器 -->
+<view class="jobDetailContainer">
+    <!-- 工作介绍 -->
+    <view class="jobIntroduction">
+        <!-- 工作名称和薪资 -->
+        <view class="JICon1">
+            <text class="JICon1Text1">销售代表</text>
+            <text class="JICon1Text2">16000-32000元</text>
+        </view>
+        <!-- 位置和学历要求 -->
+        <view class="JICon2">
+            <text class="iconfont icon-dingwei1 JICon2Text1">杭州·江干区</text>
+            <text class="iconfont icon-gongwenbao JICon2Text2">大专·全职</text>
+        </view>
+        <!-- 经理头像&名字&职位 -->
+        <view class="JICon3">
+            <image class="JICon3Avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/n7pl10NRqpZqvNhQKtOQwlyUqmjB1RY2obJh0g5Cic4WRfFNx5mxAjchpMYbTsKpJIqW9jnIOfQJKqF3USxSULg/132">
+            </image>
+            <view class="JICon3Con1">
+                <view class="JICon3Con1Con1">
+                    <text class="JICon3Con1Con1Text1">张三</text>
+                    <text class="JICon3Con1Con1Text2">/人力资源经理</text>
+                </view>
+                <view class="JICon3Con1Con2">
+                    <text class="JICon3Con1Con2Text1">杭州六六六房地产有限公司</text>
+                </view>
+            </view>
+        </view>
+        <!-- 分割线 -->
+        <view class="jobIntroductionLine">
+        
+        </view>
+    </view>
+</view>
