@@ -1,7 +1,8 @@
 {
     "pages": [
-        "pages/jobDetail/jobDetail",
+        "pages/jobChat/jobChat",
         "pages/position/position",
+        "pages/jobDetail/jobDetail",
         "pages/PositionAbout/fjjz/fjjz",
         "pages/PositionAbout/search/search",
         "pages/PositionAbout/navigation/navigation",

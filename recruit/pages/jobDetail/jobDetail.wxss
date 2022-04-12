@@ -77,3 +77,95 @@
     height:2rpx;
     background:#d3d1d1;
 }
+/* 职位描述 */
+.jobDescription{
+    display:grid;
+    width: 100%;
+    height: fit-content;
+}
+.JDText1{
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+}
+.JDText2{
+    margin-left: 30rpx;
+    font-size: 30rpx;
+    color: rgb(116, 113, 113);
+}
+.jobDescriptionLine{
+    margin-top: 30rpx;
+    width:90%;
+    margin-left: 5%;
+    height:2rpx;
+    background:#d3d1d1;
+}
+/* 职位福利 */
+.jobBenefits{
+    word-break: break-all;
+    display: grid;
+}
+.JBText1{
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+}
+.JBCon2{
+    margin-top: 10rpx;
+    display: flex;
+}
+.JBCon1{
+    display: flex;
+    width: fit-content;
+    height: 30rpx;
+    margin-left: 30rpx;
+    margin-top: 10rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 10rpx;
+    background-color:#F9F7F7;
+}
+.JBCon1Text1{
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    font-size: 24rpx;
+    color: #000;
+}
+/* 申请和聊天 */
+.application{
+    margin-top: 30rpx;
+    display: flex;
+}
+.applicationCon1{
+    display: flex;
+    width: 300rpx;
+    height: 60rpx;
+    margin-left: 30rpx;
+    margin-top: 10rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 50rpx;
+    background-color:#6684FD;
+}
+.applicationCon1Text1{
+    margin-top: 10rpx;
+    margin-left: 120rpx;
+    font-size: 30rpx;
+    color: #fff;
+}
+.applicationCon2{
+    display: flex;
+    width: 300rpx;
+    height: 60rpx;
+    margin-left: 80rpx;
+    margin-top: 10rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 50rpx;
+    background-color:#51B317;
+}
+.applicationCon2Text1{
+    margin-top: 10rpx;
+    margin-left: 120rpx;
+    font-size: 30rpx;
+    color: #fff;
+}
