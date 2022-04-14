@@ -1,0 +1,16 @@
+<!--pages/mineAbout/delivered/delivered.wxml-->
+<view class="delivered">
+    <scroll-view class="deliveredScroll" wx:for="{{3}}" bindtap="deliveredDetail">
+        <view class="deliveredCon1">
+        <text class="deliveredCon1Text1">小王子食品厂</text>
+        <text class="deliveredCon1Text2">江干区·学正街18号</text>
+    </view>
+    <view class="deliveredCon2">
+        <text class="deliveredCon2Text1">薪资:</text>
+        <text class="deliveredCon2Text2">8000-16000元</text>
+        <text class="deliveredCon2Text3">投递状态:</text>
+        <text class="deliveredCon2Text4">成功</text>
+    </view>
+    </scroll-view>
+    
+</view>

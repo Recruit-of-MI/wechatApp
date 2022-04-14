@@ -1,0 +1,55 @@
+<!--pages/mineAbout/resume/resume.wxml-->
+<!-- 头像、姓名、性别 -->
+<view class="resumeBasicInfo">
+    <view class="RBICon1">
+        <image 
+            class="RBICon1avatar" src='{{userInfo.avatarUrl?userInfo.avatarUrl:"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F01%2F55%2F09%2F4557474d965eb71.jpg&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652326801&t=246ba216bd67b12cce71058d67f15f83"}}'>
+        </image>
+        <text class="RBICon1Text1">编辑头像</text>
+    </view>
+    <view class="RBICon2">
+        <van-cell-group class="RBICon2Input">
+            <van-field 
+                size="large"
+                value="{{ value_realName }}"
+                placeholder="请输入真实姓名"
+                border="{{ false }}"
+                bind:change="onChange_realName"
+            />
+        </van-cell-group>
+        <van-radio-group class="RBICon2radio" 
+            value="{{ radio }}"
+            bind:change="onChange_pick"
+            direction="horizontal"
+            
+        >
+        <van-radio name="男" bind:click="onClick_pick">男</van-radio>
+        <van-radio name="女" bind:click="onClick_pick">女</van-radio>
+        </van-radio-group>
+    </view>
+    
+</view>
+<!-- 分割线 -->
+<view class="resumeBasicInfoLine"></view>
+<!-- 电话号码 -->
+<view class="resumePhone">
+    <text class="resumePhoneText">手机号</text>
+    <view class="RPCon1">
+        <van-cell-group class="RPInput">
+            <van-field 
+                required="true"    
+                type="number"
+                size="normal"
+                value="{{ value_Phone }}"
+                placeholder="请输入手机号"
+                border="{{ false }}"
+                bind:change="onChange_Phone"
+            />
+        </van-cell-group>
+        <text class="iconfont icon-gou-copy "></text>
+    </view>
+    <!-- 分割线 -->
+    <view class="resumeBasicInfoLine"></view>
+    <!-- 出生年份、学历、工作时间 -->
+
+</view>

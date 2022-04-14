@@ -1,17 +1,27 @@
 {
     "pages": [
-        "pages/jobChat/jobChat",
+
+        "pages/mine/mine",
+        "pages/mineAbout/publishedDetail/publishedDetail",
+        "pages/mineAbout/published/published",
         "pages/position/position",
+        "pages/mineAbout/deliveredDetail/deliveredDetail",
+        "pages/mineAbout/delivered/delivered",
+        "pages/mineAbout/resume/resume",
+        
+        "pages/jobChat/jobChat",
         "pages/jobDetail/jobDetail",
         "pages/PositionAbout/fjjz/fjjz",
         "pages/PositionAbout/search/search",
         "pages/PositionAbout/navigation/navigation",
-        "pages/mine/mine",
         "pages/news/news",
         "pages/index/index",
         "pages/PositionAbout/whole/whole",
         "pages/PositionAbout/jrjz/jrjz",
-        "pages/PositionAbout/rjzq/rjzq"
+        "pages/PositionAbout/rjzq/rjzq",
+        "pages/PositionAbout/sshb/sshb",
+        "pages/PositionAbout/gxzq/gxzq",
+        "pages/PositionAbout/mqzq/mqzq"
         
     ],
     "window": {

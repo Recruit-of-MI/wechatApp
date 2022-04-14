@@ -13,7 +13,31 @@ Page({
         // ————————————————————————————
 
     },
+    // 前往已投递页面
+    toDelivered(){
+      wx.navigateTo({
+        url: '/pages/mineAbout/delivered/delivered',
+      })
+    },
+    // 前往已发布页面
+    toPublished(){
+      wx.navigateTo({
+        url: '/pages/mineAbout/published/published',
+      })
+    },
 
+    // 前往简历页面
+    toResume(){
+      wx.navigateTo({
+        url: '/pages/mineAbout/resume/resume',
+      })
+    },
+    // 前往消息页面
+    toNews(){
+      wx.reLaunch({
+        url: '/pages/news/news',
+      })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

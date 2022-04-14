@@ -1,0 +1,55 @@
+/* pages/mineAbout/resume/resume.wxss */
+/* 头像、姓名、性别 */
+.resumeBasicInfo{
+    display: flex;
+}
+.RBICon1{
+    display: grid;
+}
+.RBICon1avatar{
+    margin-top: 60rpx;
+    margin-left: 120rpx;
+    width: 120rpx;
+    height: 120rpx;
+    /* border:2rpx solid rgb(196, 190, 190); */
+    border-radius: 50% 50% 50% 50%;
+}
+.RBICon1Text1{
+    margin-left: 120rpx;
+    color: #959494;
+}
+.RBICon2{
+    display: grid;
+}
+.RBICon2Input{
+    margin-top: 60rpx;
+    margin-left: 60rpx;
+}
+.RBICon2radio{
+    margin-left: 95rpx;
+    color: #959494;
+}
+.resumeBasicInfoLine{
+    margin-top: 30rpx;
+    width:90%;
+    margin-left: 5%;
+    height:2rpx;
+    background:#d3d1d1;
+}
+/* 电话号码 */
+.resumePhone{
+    display: grid;
+}
+.resumePhoneText{
+    margin-top: 30rpx;
+    font-size: 28rpx;
+    text-align: center;
+    color: #959494;
+}
+.RPCon1{
+    display: flex;
+}
+.RPInput{
+    margin-left: 260rpx;
+}
+/* 出生年份、学历、工作时间 */

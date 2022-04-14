@@ -54,6 +54,12 @@ Page({
         url: '/pages/PositionAbout/fjjz/fjjz',
       })
     },
+    // 前往名企专区
+    toMqzq(){
+      wx.navigateTo({
+        url: '/pages/PositionAbout/mqzq/mqzq',
+      })
+    },
 
 
 

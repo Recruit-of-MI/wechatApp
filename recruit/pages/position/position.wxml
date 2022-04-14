@@ -68,7 +68,7 @@
                 <text class="hotCon2Back2Text1">高薪职位</text>
                 <text class="hotCon2Back2Text2">直招好工作</text>
             </view>
-            <view class="hotCon2Back3">
+            <view class="hotCon2Back3"bindtap="toMqzq">
                 <text class="hotCon2Back3Text1">名企专区</text>
                 <text class="hotCon2Back3Text2">超多名企等你选</text>
             </view>

@@ -4,13 +4,13 @@
     <!-- 个人资料框 -->
     <view class="Container">
         <!-- 个人资料包裹器 -->
-        <view class="userInfoBox" bindtap="getUserinfo">
+        <view class="userInfoBox" >
             <!-- 头像 -->
             <image 
-                class="avatar" src='{{userInfo.avatarUrl?userInfo.avatarUrl:"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Ffb9431a4c99691e54952d85ed034faf9a6b7e4f22d45-xy5FHF_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652266099&t=a14622970b9f064bc7f4f1497399756c"}}'>
+                class="avatar" src='{{userInfo.avatarUrl?userInfo.avatarUrl:"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Ffb9431a4c99691e54952d85ed034faf9a6b7e4f22d45-xy5FHF_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652266099&t=a14622970b9f064bc7f4f1497399756c"}}' bindtap="getUserinfo">
             </image>
             <view class="con2">
-                <view class="con1">
+                <view class="con1" bindtap="getUserinfo">
                 <!-- 用户名 -->
                 <text class="username">
                 {{userInfo.nickName?userInfo.nickName:'姓名待填写'}}
@@ -28,14 +28,14 @@
                         <text class="infoperson">个人信息待填写</text>
                     </view>
                      
-                    <view class="resumeChangeBack">
+                    <view class="resumeChangeBack" bindtap="toResume">
                         <text class="iconfont icon-gongwenbao gongwenbao"></text>
                         <text class="rctext">简历修改</text>
                     </view>
                 </view>
             </view>
         </view>
-        <view class="buildResume">
+        <view class="buildResume" bindtap="toResume">
             <text class="r1text">创建简历，高薪工作来找你</text>
             <view class="buildBack">
                 <text class="r2text">去修改></text>
@@ -51,18 +51,18 @@
     <view class="jobResult">
         <text class="jobResultTitle">求职/雇佣进程</text>
         <view class="resultContainer">
-            <view class="rCon">
+            <view class="rCon" bindtap="toNews">
                 <text class="iconfont icon-xiaoxi1 iconResult"></text>
                 <text class="resultText">已沟通</text>
             </view>
-            <view class="rCon">
+            <view class="rCon" bindtap="toDelivered">
                 <text class="iconfont icon-flow-others iconResult"></text>
-                <text class="resultText">已沟通</text>
+                <text class="resultText">已投递</text>
                 
             </view>
-            <view class="rCon">
+            <view class="rCon" bindtap="toPublished">
                 <text class="iconfont icon-icon-- iconResult"></text>
-                <text class="resultText">已沟通</text>
+                <text class="resultText">已发布</text>
             </view>
         </view>
     </view>
