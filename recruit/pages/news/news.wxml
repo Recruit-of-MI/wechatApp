@@ -11,7 +11,7 @@
     </view>
 </view>
 <!-- 消息 消息列表 -->
-<view wx:if="{{isChecked1}}" wx:for="{{MessageList1}}">
+<view wx:if="{{isChecked1}}" wx:for="{{MessageList1}}" bindtap="tojobChat">
     <view class="messageListContainer" >
     <!-- 头像 -->
     <image class="messageListContainerAvatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/n7pl10NRqpZqvNhQKtOQwlyUqmjB1RY2obJh0g5Cic4WRfFNx5mxAjchpMYbTsKpJIqW9jnIOfQJKqF3USxSULg/132">
@@ -30,7 +30,7 @@
 </view>
 
 <!-- 面试 消息列表列 -->
-<view wx:if="{{isChecked2}}" wx:for="{{MessageList2}}">
+<view wx:if="{{isChecked2}}" wx:for="{{MessageList2}}" bindtap="tojobChat">
     <view class="messageListContainer" >
     <!-- 头像 -->
     <image class="messageListContainerAvatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/n7pl10NRqpZqvNhQKtOQwlyUqmjB1RY2obJh0g5Cic4WRfFNx5mxAjchpMYbTsKpJIqW9jnIOfQJKqF3USxSULg/132">

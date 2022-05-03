@@ -31,8 +31,8 @@
             <text class="searchHotCon1Text1">热门搜索</text>
         </view>
         <view class="seachHotCon2" >
-            <view class="searchHistoryBack" wx:for="{{6}}">
-                <text class="searchHistoryBackText">司机</text>
+            <view class="searchHistoryBack" bindtap="hotClick" wx:for="{{hotSearchList}}" data-index="{{index}}">
+                <text class="searchHistoryBackText">{{hotSearchList[index]}}</text>
             </view>
         </view>
     </view>

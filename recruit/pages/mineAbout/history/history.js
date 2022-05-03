@@ -1,34 +1,13 @@
-// pages/search/search.js
+// pages/mineAbout/history/history.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        value: '',
-        hotSearchList:['货车司机','销售经理','送餐员','配送员','驾驶员'],
-        // 历史记录
-        historyList:[],
-    },
-    onChange(e) {
-        this.setData({
-          value: e.detail,
-        });
-      },
-      onSearch() {
-        console.log('搜索1' + this.data.value)
-      },
-      onClick() {
-        console.log('搜索2' + this.data.value);
-      },
 
-      hotClick(event){
-        let index = event.currentTarget.dataset;
-        console.log(index.index)
-        this.setData({
-            value:this.data.hotSearchList[index.index]
-        })
-      },
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
@@ -36,6 +15,12 @@ Page({
 
     },
 
+    // 前往工作详情页面
+    tojobDetail(){
+        wx.navigateTo({
+          url: '/pages/jobDetail/jobDetail',
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

@@ -18,6 +18,12 @@ Page({
     onLoad: function (options) {
         
     },
+    // 前往聊天页面
+    tojobChat(){
+        wx.navigateTo({
+          url: '/pages/jobChat/jobChat',
+        })
+    },
 
     messageBind(){
         this.setData({

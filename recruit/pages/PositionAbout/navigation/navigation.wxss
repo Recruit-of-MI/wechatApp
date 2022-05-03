@@ -41,8 +41,11 @@
     margin-left: 30rpx;
 }
 .hotAreaCon1{
+    
     display: flex;
 }
+
+
 .hotAreaBack{
     display: flex;
     width: 100rpx;

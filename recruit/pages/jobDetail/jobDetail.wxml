@@ -26,6 +26,7 @@
                     <text class="JICon3Con1Con2Text1">杭州六六六房地产有限公司</text>
                 </view>
             </view>
+            <text class="iconfont icon-shoucang1 JICon3Icon"></text>
         </view>
         <!-- 分割线 -->
         <view class="jobIntroductionLine"></view>

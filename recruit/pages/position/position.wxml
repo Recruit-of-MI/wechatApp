@@ -8,7 +8,7 @@
         <!-- 上部 -->
         <view class="Con1">
             <text class="iconfont icon-dingwei iconCon1"></text>
-            <text class="Con1Text1" bindtap="toNavigation">江干区</text>
+            <text class="Con1Text1" bindtap="toNavigation">{{currentPlace}}</text>
             <text class="Con1Text2">开工大吉</text>
         </view>
         <!-- 下部 -->
@@ -20,6 +20,7 @@
             shape="round"
             background="rgb(207, 68, 68)"
             use-action-slot
+            disabled
             bind:change="onChange"
             bind:search="onSearch"
             >

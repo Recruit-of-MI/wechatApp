@@ -2,7 +2,7 @@
 <view class="currentArea">
     <text class="currentAreaText">当前城市</text>
     <view class="currentAreaBack">
-        <text class="currentAreaBackText">江干区</text>
+        <text class="currentAreaBackText">{{currentPlace}}</text>
     </view>
     <view class="currentAreaLine">
     </view>
@@ -11,32 +11,14 @@
 <!-- 热门城市 -->
 <view class="hotArea">
     <text class="hotAreaText">热门城市</text>
-    <view class="hotAreaCon1">
-        <view class="hotAreaBack">
-            <text class="hotAreaBackText">上城区</text>
-        </view>
-        <view class="hotAreaBack">
-            <text class="hotAreaBackText">临安区</text>
-        </view>
-        <view class="hotAreaBack">
-            <text class="hotAreaBackText">拱墅区</text>
-        </view>
-        <view class="hotAreaBack">
-            <text class="hotAreaBackText">西湖区</text>
-        </view>
-        <view class="hotAreaBack">
-            <text class="hotAreaBackText">滨江区</text>
+    <view class="hotAreaCon1" >
+        <view class="hotAreaBack" wx:for="{{placeList1}}" >
+            <text class="hotAreaBackText" bindtap="toSelcetPlace1" data-index="{{index}}">{{placeList1[index]}}</text>
         </view>
     </view>
-    <view class="hotAreaCon1">
-        <view class="hotAreaBack">
-            <text class="hotAreaBackText">萧山区</text>
-        </view>
-        <view class="hotAreaBack">
-            <text class="hotAreaBackText">余杭区</text>
-        </view>
-        <view class="hotAreaBack">
-            <text class="hotAreaBackText">富阳区</text>
+    <view class="hotAreaCon1" >
+        <view class="hotAreaBack" wx:for="{{placeList2}}" >
+            <text class="hotAreaBackText" bindtap="toSelcetPlace2" data-index="{{index}}">{{placeList2[index]}}</text>
         </view>
     </view>
 </view>

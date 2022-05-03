@@ -1,0 +1,32 @@
+<view class="settingContainer">
+    <view class="seetingCon1">
+        <view class="settingBack1">
+            <text class="SB1Text1">账号与安全</text>
+            <text class="iconfont icon-yousanjiaoxing SB1Icon1"></text>
+        </view>
+        <view class="Line1"></view>
+        <view class="settingBack1">
+            <text class="SB1Text1">个人信息</text>
+            <text class="iconfont icon-yousanjiaoxing SB1Icon1"></text>
+        </view>
+        <view class="Line1"></view>
+        <view class="settingBack1">
+            <text class="SB1Text1">隐私管理</text>
+            <text class="iconfont icon-yousanjiaoxing SB1Icon1"></text>
+        </view>
+
+        <view class="settingBack2">
+            <text class="SB2Text1">意见反馈</text>
+            <text class="iconfont icon-yousanjiaoxing SB2Icon1"></text>
+        </view>
+        <view class="settingBack2">
+            <text class="SB2Text1">关于</text>
+            <text class="iconfont icon-yousanjiaoxing SB2Icon1"></text>
+        </view>
+
+        <view class="settingBack3">
+            <text class="SB3Text1">退出</text>
+        </view>
+    </view>
+   
+</view>

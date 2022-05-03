@@ -1,5 +1,5 @@
 <view  wx:for="{{3}}">
-    <view class="messageListContainer">
+    <view class="messageListContainer" bindtap="tojobChat">
     <!-- 头像 -->
     <image class="messageListContainerAvatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/n7pl10NRqpZqvNhQKtOQwlyUqmjB1RY2obJh0g5Cic4WRfFNx5mxAjchpMYbTsKpJIqW9jnIOfQJKqF3USxSULg/132">
     </image>

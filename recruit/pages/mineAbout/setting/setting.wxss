@@ -1,0 +1,67 @@
+/* pages/mineAbout/setting/setting.wxss */
+.settingContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: #E3E2E2;
+}
+.settingCon1{
+    position: absolute;
+}
+.settingBack1{
+    display: flex;
+    background-color: #fff;
+    height: 120rpx;
+    width: 100%;
+}
+.SB1Text1{
+    width: 200rpx;
+    font-size: 34rpx;
+    margin-left: 30rpx;
+    margin-top: 40rpx;
+}
+.SB1Icon1{
+    margin-left: 430rpx;
+    margin-top: 47rpx;
+}
+.Line1{
+    width:80%;
+    margin-left: 20%;
+    height:2rpx;
+    background:#d3d1d1;
+}
+
+.settingBack2{
+    margin-top: 50rpx;
+    display: flex;
+    background-color: #fff;
+    height: 120rpx;
+    width: 100%;
+}
+.SB2Text1{
+    width: 200rpx;
+    font-size: 34rpx;
+    margin-left: 30rpx;
+    margin-top: 40rpx;
+}
+.SB2Icon1{
+    margin-left: 430rpx;
+    margin-top: 47rpx;
+}
+
+.settingBack3{
+    margin-top: 50rpx;
+    display: flex;
+    background-color: #fff;
+    height: 120rpx;
+    width: 100%;
+}
+.SB3Text1{
+    text-align: center;
+    color: #FF0000;
+    width: 100%;
+    font-size: 34rpx;
+    margin-left: 30rpx;
+    margin-top: 40rpx;
+}

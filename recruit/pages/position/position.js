@@ -5,7 +5,10 @@ Page({
      * 页面的初始数据
      */
     data: {
-        value: '',
+      // 当前城市
+      currentPlace:'',
+      value: '',
+      
     },
     onChange(e) {
         this.setData({
@@ -24,9 +27,15 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      
     },
 
+    showCurrentPlace(){
+      let currentPlace = wx.getStorageSync('currentPlace')
+      this.setData({
+          currentPlace
+      })
+    },
     //前往定位导航页面
     toNavigation(){
       wx.navigateTo({
@@ -75,7 +84,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      this.showCurrentPlace()
     },
 
     /**

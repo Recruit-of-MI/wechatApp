@@ -15,6 +15,12 @@ Page({
 
     },
 
+    // 前往聊天页面
+    tojobChat(){
+        wx.navigateTo({
+          url: '/pages/jobChat/jobChat',
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

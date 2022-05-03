@@ -1,0 +1,85 @@
+<!--pages/mineAbout/zhaoren/zhaoren.wxml-->
+<van-cell-group>
+  <van-field
+    value="{{ value_position }}"
+    clearable
+    label="我要招聘"
+    icon="search"
+    bind:change="onChange_position"
+    placeholder="请输入要招聘的工作"
+    bind:click-icon="onClickIcon"
+  />
+  <van-field
+    value="{{ value_lowsalary }}"
+    clearable
+    label="最低月薪"
+    type="number"
+    maxlength="6"
+    bind:change="onChange_lowsalary"
+    placeholder="请输入最低月薪要求"
+  />
+  <van-field
+    value="{{ value_highsalary }}"
+    clearable
+    type="number"
+    maxlength="6"
+    label="最高月薪"
+    bind:change="onChange_highsalary"
+    placeholder="请输入最高月薪要求"
+  />
+  <van-field
+    value="{{ value_welfare }}"
+    clearable
+    label="福利待遇"
+    bind:change="onChange_welfare"
+    placeholder="请输入福利待遇"
+  />
+  <van-cell-group>
+  <van-field
+    value="{{ description }}"
+    label="职位描述"
+    type="textarea"
+    placeholder="请输入职位的描述"
+    autosize
+    show-word-limit
+    bind:change="onChange_description"
+    maxlength="100"
+    border="{{ false }}"
+  />
+  <van-field
+    value="{{ value_education }}"
+    clearable
+    label="学历要求"
+    bind:change="onChange_education"
+    placeholder="例如本科，大专，高中，初中"
+  />
+  <van-field
+    value="{{ value_year }}"
+    clearable
+    label="工作年限"
+    bind:change="onChange_year"
+    placeholder="例如一年，两年，三年以上"
+  />
+  <van-field
+    value="{{ value_place }}"
+    clearable
+    label="工作地点"
+    type="textarea"
+    bind:change="onChange_place"
+    placeholder="完善详细地址"
+    icon="location-o"
+    show-word-limit
+    maxlength="50"
+    autosize
+  />
+  <van-field
+    value="{{ value_number }}"
+    clearable
+    label="招聘人数"
+    bind:change="onChange_number"
+    placeholder="请输入招聘的人数"
+    type="number"
+  />
+</van-cell-group>
+</van-cell-group>
+

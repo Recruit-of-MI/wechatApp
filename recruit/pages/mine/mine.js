@@ -13,6 +13,30 @@ Page({
         // ————————————————————————————
 
     },
+    // 前往浏览历史页面
+    toHistory(){
+      wx.navigateTo({
+        url: '/pages/mineAbout/history/history',
+      })
+    },
+    // 前往招人页面
+    toZhaoren(){
+      wx.navigateTo({
+        url: '/pages/mineAbout/zhaoren/zhaoren',
+      })
+    },
+    // 前往设置页面
+    toSetting(){
+      wx.navigateTo({
+        url: '/pages/mineAbout/setting/setting',
+      })
+    },
+    // 前面我的收藏页面
+    toCollection(){
+      wx.navigateTo({
+        url: '/pages/mineAbout/collection/collection',
+      })
+    },
     // 前往已投递页面
     toDelivered(){
       wx.navigateTo({
