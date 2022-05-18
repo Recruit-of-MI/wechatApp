@@ -1,38 +1,32 @@
 {
     "pages": [
-        "pages/position/position",
+        "pages/mineAbout/resume/resume",
         "pages/jobChat/jobChat",
+        "pages/jobChat_copy/jobChat_copy",
+        "pages/news/news",
+        "pages/position/position",
+        "pages/PositionAbout/fjjz/fjjz",
+       
         "pages/PositionAbout/gxzq/gxzq",
-        
-        
         "pages/mine/mine",
         "pages/mineAbout/zhaoren/zhaoren",
         "pages/mineAbout/setting/setting",
-        
         "pages/jobDetail/jobDetail",
         "pages/mineAbout/history/history",
-        
         "pages/mineAbout/publishedDetail/publishedDetail",
         "pages/mineAbout/published/published",
-        
         "pages/mineAbout/deliveredDetail/deliveredDetail",
         "pages/mineAbout/delivered/delivered",
-        "pages/mineAbout/resume/resume",
         
-        "pages/PositionAbout/fjjz/fjjz",
         "pages/PositionAbout/search/search",
         "pages/PositionAbout/navigation/navigation",
-        "pages/news/news",
         "pages/index/index",
         "pages/PositionAbout/whole/whole",
         "pages/PositionAbout/jrjz/jrjz",
         "pages/PositionAbout/rjzq/rjzq",
         "pages/PositionAbout/sshb/sshb",
-        
         "pages/PositionAbout/mqzq/mqzq",
-       
         "pages/mineAbout/collection/collection"
-        
         
     ],
     "window": {

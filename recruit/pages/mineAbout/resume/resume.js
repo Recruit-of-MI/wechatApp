@@ -30,6 +30,27 @@ Page({
       })
       console.log(event.detail);
     },
+    // 手机号验证
+    checkPhone(){
+      if(!phoneNum){
+        //提示用户
+        wx.showToast({
+          title: '手机号为空',
+          icon: 'error'
+        })
+        return;
+       }
+       //定义正则表达式
+       let phoneNumReg = /^1(3|4|5|6|7|8|9)\d{9}$/;
+       if(!phoneNumReg.test(phoneNum)){
+        wx.showToast({
+          title: '手机号格式错误',
+          icon: 'error'
+        })
+        return;
+       }
+    },
+    
 // 性别选择器
     onChange_pick(event) {
       console.log(event)
@@ -38,6 +59,7 @@ Page({
       });
     },
   
+
     // ——————————————————————————————————————
     /**
      * 生命周期函数--监听页面加载

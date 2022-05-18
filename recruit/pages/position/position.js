@@ -1,4 +1,5 @@
 // pages/position/position.js
+import request from '../../utils/request'
 Page({
 
     /**
@@ -8,6 +9,7 @@ Page({
       // 当前城市
       currentPlace:'',
       value: '',
+      
       
     },
     onChange(e) {
@@ -63,6 +65,7 @@ Page({
         url: '/pages/PositionAbout/fjjz/fjjz',
       })
     },
+    
     // 前往名企专区
     toMqzq(){
       wx.navigateTo({

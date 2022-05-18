@@ -1,4 +1,5 @@
 // pages/news/news.js
+import request from '../../utils/request'
 Page({
 
     /**
@@ -9,14 +10,35 @@ Page({
     data:{
       isChecked1:true,
       isChecked2:false,
-      MessageList1:6,
-      MessageList2:2,
+      //   应聘消息列表
+      applyList:[],
+      //   面试消息列表
+      interviewList:[],
     },
     /**
      * 生命周期函数--监听页面加载
      */
+
+    //  获取应聘消息列表
+    async getApplyList(){
+        let applyList = await request('/message/apply/show',{userId:'35339119351120778x'})
+        this.setData({
+            applyList
+        })
+    },
+    //  获取面试消息列表
+    async getInterviewList(){
+        let interviewList = await request('/message/recruit/show')
+        this.setData({
+            interviewList
+        })
+    },
+
+
+
     onLoad: function (options) {
-        
+        this.getApplyList()
+        this.getInterviewList()
     },
     // 前往聊天页面
     tojobChat(){
@@ -53,6 +75,7 @@ Page({
         //     isChecked1:true,
         //     isChecked2:false
         // })
+        this.getApplyList()
     },
 
     /**

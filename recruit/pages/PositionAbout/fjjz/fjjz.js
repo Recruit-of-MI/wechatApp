@@ -1,18 +1,29 @@
 // pages/PositionAbout/fjjz/fjjz.js
+import request from '../../../utils/request'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        // 附近热招
+      hotJobList:[],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
 
+
+    // 获取附近急招——接口
+    async getHotJob(){
+        let hotJobList = await request('/getHotJob')
+        this.setData({
+          hotJobList:hotJobList
+        })
+      },
+    onLoad: function (options) {
+        this.getHotJob()
     },
 
     /**
