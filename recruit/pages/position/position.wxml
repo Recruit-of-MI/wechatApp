@@ -17,6 +17,7 @@
             <van-search bindtap="toSearch"
             value="{{ value }}"
             placeholder="请输入职位或关键词"
+            disabled="false"
             shape="round"
             background="rgb(207, 68, 68)"
             use-action-slot

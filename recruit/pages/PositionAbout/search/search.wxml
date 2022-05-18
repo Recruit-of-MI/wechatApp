@@ -12,18 +12,23 @@
             bind:change="onChange"
             bind:search="onSearch"
             >
-            <view slot="action" bind:tap="onClick" class="searchSlot">取消</view>
+            <view slot="action" bind:tap="onClick" class="searchSlot">搜索</view>
     </van-search>
     <!-- 显示1 -->
     <!-- 历史记录 -->
     <view class="searchHistory">
         <view class="searchHistoryCon1">
             <text class="searchHistoryCon1Text1">历史搜索</text>
-            <text class="iconfont icon-shanchu1 searchHistoryCon1icon1"></text>
+            <text class="iconfont icon-shanchu1 searchHistoryCon1icon1" bindtap="delete_history"></text>
         </view>
-        <view class="searchHistoryBack">
-            <text class="searchHistoryBackText">司机</text>
+        <view class="SHCon2">
+            <view bindtap="historyClick" class="searchHistoryBack" data-index="{{index}}" wx:for="{{historyList}}">
+                <text class="searchHistoryBackText">{{item}}</text>
+            </view>
+           
         </view>
+        
+        
     </view>
     <!-- 热门搜索 -->
     <view class="searchHot">

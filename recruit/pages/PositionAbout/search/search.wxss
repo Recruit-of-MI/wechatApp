@@ -1,9 +1,12 @@
 /* pages/search/search.wxss */
 .searchHistory{
+
     display: grid;
 }
 .searchHistoryCon1{
     display: flex;
+}
+.SHCon2{
 }
 .searchHistoryCon1Text1{
     font-size: 36rpx;

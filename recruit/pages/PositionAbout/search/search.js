@@ -19,7 +19,65 @@ Page({
         console.log('搜索1' + this.data.value)
       },
       onClick() {
-        console.log('搜索2' + this.data.value);
+        // 将搜索的关键字添加到搜索历史记录中
+        let {value, historyList} = this.data;
+        if(historyList.length>7){
+          if(historyList.indexOf(value) !== -1){
+            historyList.splice(historyList.indexOf(value), 1)
+          }
+          historyList.splice(7,1)
+          historyList.unshift(value)
+          this.setData({
+              historyList
+          })
+          wx.setStorageSync('searchHistory', historyList)
+        }else{
+          if(historyList.indexOf(value) !== -1){
+            historyList.splice(historyList.indexOf(value), 1)
+          }
+          historyList.unshift(value)
+          this.setData({
+              historyList
+          })
+          wx.setStorageSync('searchHistory', historyList)
+        }
+      
+      },
+
+       //获取本地历史记录
+    getSearchHistory(){
+      let historyList = wx.getStorageSync('searchHistory')
+      if(historyList){
+          this.setData({
+              historyList
+          })
+      }
+  },
+  
+      // 删除历史记录
+      delete_history(){
+        wx.showModal({
+          title: '提示',
+          content: '确认删除吗？',
+          success: (res) =>  {
+            if (res.confirm) {
+              //清空data中historyList
+              this.setData({
+                  historyList: []
+              })
+              //移除本地历史记录缓存
+              wx.removeStorageSync('searchHistory')
+            } else if (res.cancel) {
+            }
+          }
+        })
+      },
+      historyClick(event){
+        let index = event.currentTarget.dataset;
+        console.log(index.index)
+        this.setData({
+            value:this.data.historyList[index.index]
+        })
       },
 
       hotClick(event){
@@ -47,7 +105,9 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+     
+      this.getSearchHistory()
+     
     },
 
     /**

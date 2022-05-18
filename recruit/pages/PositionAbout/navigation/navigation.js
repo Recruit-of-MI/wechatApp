@@ -28,7 +28,9 @@ Page({
             currentPlace:this.data.placeList1[index.index]
         })
         wx.setStorageSync('currentPlace', this.data.currentPlace)
-        
+        wx.reLaunch({
+          url: '/pages/position/position',
+        })
     },
     toSelcetPlace2(event){
         let index = event.currentTarget.dataset;
@@ -36,6 +38,10 @@ Page({
         this.setData({
             currentPlace:this.data.placeList2[index.index]
         })
+        wx.setStorageSync('currentPlace', this.data.currentPlace)
+        wx.reLaunch({
+            url: '/pages/position/position',
+          })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
