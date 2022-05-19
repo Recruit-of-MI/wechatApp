@@ -37,15 +37,15 @@
                 <text class="iconfont icon-fujin"></text>
                 <text>附近急招</text>
             </view>
-            <view class="naviItem" >
+            <view class="naviItem" bindtap="toJrjz">
                 <text class="iconfont icon-fangdajing"></text>
                 <text>今日急招</text>
             </view>
-            <view class="naviItem">
+            <view class="naviItem" bindtap="toSj">
                 <text class="iconfont icon-siji-"></text>
                 <text>司机</text>
             </view>
-            <view class="naviItem">
+            <view class="naviItem" bindtap="toRjzq">
                 <text class="iconfont icon-qiandai"></text>
                 <text>日结专区</text>
             </view>
@@ -101,11 +101,11 @@
             <text class="GLCon1Text2">{{currentPlace}}></text>
         </view>
         <view class="GLCon2">
-            <view class="GLCon2Back1">
-                <text class="GLCon2Back1Text1">最新</text>
+            <view class="{{is_select1?'GLCon2Back1s':'GLCon2Back1'}}" bindtap="zuixinBind">
+                <text class="{{is_select1?'GLCon2Back1Text1s':'GLCon2Back1Text1'}}">最新</text>
             </view>
-            <view class="GLCon2Back2">
-                <text class="GLCon2Back2Text1">周边</text>
+            <view class="{{is_select2?'GLCon2Back2s':'GLCon2Back2'}}">
+                <text class="{{is_select2?'GLCon2Back2Text1s':'GLCon2Back2Text1'}}" bindtap="zhoubianBind">周边</text>
             </view>
             <text class="iconfont icon-shaixuan GLCon2Text1"></text>
             <text class="GlCon2Text2">筛选</text>

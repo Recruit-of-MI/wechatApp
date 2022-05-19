@@ -9,6 +9,8 @@ Page({
       // 当前城市
       currentPlace:'',
       value: '',
+      is_select1:false,
+      is_select2:false
       
       
     },
@@ -73,7 +75,20 @@ Page({
       })
     },
 
-
+    // 点击最新按钮
+    zuixinBind(){
+      this.setData({
+        is_select1:true,
+        is_select2:false
+      })
+    },
+    // 点击周边按钮
+    zhoubianBind(){
+      this.setData({
+        is_select2:true,
+        is_select1:false
+      })
+    },
 
 
     /**

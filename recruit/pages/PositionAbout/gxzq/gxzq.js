@@ -13,17 +13,7 @@ Page({
      */
     onLoad: function (options) {
 
-        var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-        var xhrFile = new XMLHttpRequest();
-        // 建立连接，第三个参数为同步或异步请求
-        xhrFile.open("GET", 'E://test//test.csv', false);
-        // method 1
-        xhrFile.onload  = function() {
-            console.log("success")
-            const allText = xhrFile.response;
-            callback(allText) 
-        }
-        xhrFile.send();
+        
     },
 
     /**

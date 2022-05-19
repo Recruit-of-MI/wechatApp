@@ -204,7 +204,24 @@
 .GLCon2{
     display: flex;
 }
+/* 最新未选择 */
 .GLCon2Back1{
+    display: flex;
+    width: 80rpx;
+    height: 30rpx;
+    margin-left: 30rpx;
+    margin-top: 40rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 10rpx;
+    background-color:#E1DFDF;
+}
+.GLCon2Back1Text1{
+    font-size: 24rpx;
+    margin-left: 16rpx;
+    color: #000;
+}
+/* 最新选择 */
+.GLCon2Back1s{
     display: flex;
     width: 80rpx;
     height: 30rpx;
@@ -214,11 +231,12 @@
     border-radius: 10rpx;
     background-color:#D7F9E1;
 }
-.GLCon2Back1Text1{
+.GLCon2Back1Text1s{
     font-size: 24rpx;
     margin-left: 16rpx;
     color: #0D8430;
 }
+/* 周边未选择 */
 .GLCon2Back2{
     display: flex;
     width: 80rpx;
@@ -233,6 +251,22 @@
     font-size: 24rpx;
     margin-left: 16rpx;
     color: #000;
+}
+/* 周边选择 */
+.GLCon2Back2s{
+    display: flex;
+    width: 80rpx;
+    height: 30rpx;
+    margin-left: 30rpx;
+    margin-top: 40rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 10rpx;
+    background-color:#D7F9E1;
+}
+.GLCon2Back2Text1s{
+    font-size: 24rpx;
+    margin-left: 16rpx;
+    color: #0D8430;
 }
 .GLCon2Text1{
     font-size: 38rpx;
