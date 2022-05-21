@@ -7,7 +7,7 @@
     <view class="headBackground">
         <!-- 上部 -->
         <view class="Con1">
-            <text class="iconfont icon-dingwei iconCon1"></text>
+            <text class="iconfont icon-dingwei iconCon1" bindtap="toNavigation"></text>
             <text class="Con1Text1" bindtap="toNavigation">{{currentPlace}}</text>
             <text class="Con1Text2">开工大吉</text>
         </view>

@@ -46,10 +46,40 @@
                 bind:change="onChange_Phone"
             />
         </van-cell-group>
-        <text class="iconfont icon-gou-copy "></text>
+        <text wx:if="{{is_ok}}" class="iconfont icon-gou-copy RPIcon "></text>
     </view>
     <!-- 分割线 -->
     <view class="resumeBasicInfoLine"></view>
     <!-- 出生年份、学历、工作时间 -->
+    <van-dropdown-menu class="RPMenu">
+        <van-dropdown-item bind:change="change1" value="{{ value1 }}" options="{{ option1 }}" />
+        <van-dropdown-item bind:change="change2" value="{{ value2 }}" options="{{ option2 }}" />
+        <van-dropdown-item bind:change="change3" value="{{ value3 }}" options="{{ option3 }}" />
+    </van-dropdown-menu>
+    <!-- 分割线 -->
+    <view class="resumeBasicInfoLine"></view>
+    <van-cell-group class="RPInput2">
+            <van-field    
+                size="normal"
+                value="{{ value_Position }}"
+                placeholder="填写求职意向"
+                border="{{ false }}"
+                bind:change="onChange_Position"
+            />
+        </van-cell-group>
+    <!-- 分割线 -->
+    <view class="resumeBasicInfoLine"></view>
+    <van-dropdown-menu class="RPMenu">
+        <van-dropdown-item bind:change="change4" value="{{ value4 }}" options="{{ option4 }}" />
+    </van-dropdown-menu>
+    <!-- 分割线 -->
+    <view class="resumeBasicInfoLine"></view>
+    <!-- 申请和聊天 -->
+    <view class="application">
+        <view class="applicationCon2" bindtap="application">
+            <text class="applicationCon2Text1">立即申请</text>
+        </view>
+    </view>
+   
 
 </view>

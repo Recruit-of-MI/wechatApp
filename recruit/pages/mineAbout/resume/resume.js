@@ -6,19 +6,121 @@ Page({
      */
     data: {
         // 输入框
+        value_Avatal: '',
         value_realName: '',
         value_Phone:'',
+        value_Position:'',
+        value_Year: '',
+        value_Education:'',
+        value_Time:'',
+        value_Protect:'',
         // ——————————————————————-
          // 性别选择器
          radio: '1',
          // ——————————————————————-
-        
+         is_ok:false,
+         option1: [
+          { text: '出生年份', value: 'a' },
+          { text: '2003年', value: '2003年' },
+          { text: '2002年', value: '2002年' },
+          { text: '2001年', value: '2001年' },
+          { text: '2000年', value: '2000年' },
+          { text: '1999年', value: '1999年' },
+          { text: '1998年', value: '1998年' },
+          { text: '1997年', value: '1997年' },
+          { text: '1996年', value: '1996年' },
+          { text: '1995年', value: '1995年' },
+        ],
+        option2: [
+          { text: '最高学历', value: 'b' },
+          { text: '初中', value: '初中' },
+          { text: '高中', value: '高中' },
+          { text: '中专', value: '中专' },
+          { text: '大专', value: '大专' },
+          { text: '本科', value: '本科' },
+          { text: '硕士', value: '硕士' },
+          { text: '博士', value: '博士' },
+        ],
+        option3: [
+          { text: '工作时间', value: 'c' },
+          { text: '1-3年', value: '1-3年' },
+          { text: '3-5年', value: '3-5年' },
+          { text: '3-10年', value: '3-10年' },
+          { text: '10年以上', value: '10年以上' },
+        ],
+        option4: [
+          { text: '隐私保护', value: 'd' },
+          { text: '所有招聘方', value: '所有招聘方' },
+          { text: '特定招聘方', value: '特定招聘方' },
+        ],
+        value1: 'a',
+        value2: 'b',
+        value3: 'c',
+        value4: 'd'        
+    },
+
+    // 选择头像
+    
+    // 出生年份
+    change1(event){
+      if(event.detail != 'a'){
+        this.setData({
+          value_Year: event.detail,
+        })
+      }else{
+        this.setData({
+          value_Year: '',
+        })
+      }
+    },
+    // 最高学历
+    change2(event){
+      if(event.detail != 'b'){
+        this.setData({
+          value_Education: event.detail,
+        })
+      }else{
+        this.setData({
+          value_Education: '',
+        })
+      }
+    },
+    // 工作时间
+    change3(event){
+      if(event.detail != 'c'){
+        this.setData({
+          value_Time: event.detail,
+        })
+      }else{
+        this.setData({
+          value_Time: '',
+        })
+      }
+    },
+    // 隐私保护
+    change4(event){
+      if(event.detail != 'd'){
+        this.setData({
+          value_Protect: event.detail,
+        })
+      }else{
+        this.setData({
+          value_Protect: '',
+        })
+      }
     },
     // 真实姓名
     onChange_realName(event) {
       // event.detail 为当前输入的值
       this.setData({
         value_realName:event.detail
+      })
+      console.log(event.detail);
+    },
+    // 求职意向
+    onChange_Position(event){
+      this.setData({
+        value_Position:event.detail
       })
       console.log(event.detail);
     },
@@ -59,6 +161,38 @@ Page({
       });
     },
   
+    // 申请确认
+    application(){
+      let {value_realName,value_Phone,value_Position,radio,value_Year,value_Education,value_Time,value_Protect} = this.data
+      // 手机号验证
+      if(!value_Phone){
+        //提示用户
+        wx.showToast({
+          title: '手机号为空',
+          icon: 'error'
+        })
+        this.setData({
+          is_ok:false
+        })
+        return;
+       }
+       //定义正则表达式
+       let phoneNumReg = /^1(3|4|5|6|7|8|9)\d{9}$/;
+       if(!phoneNumReg.test(value_Phone)){
+        wx.showToast({
+          title: '手机号格式错误',
+          icon: 'error'
+        })
+        this.setData({
+          is_ok:false
+        })
+        return;
+       }else{
+         this.setData({
+           is_ok:true
+         })
+       }
+    },
 
     // ——————————————————————————————————————
     /**
