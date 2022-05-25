@@ -1,6 +1,13 @@
 <!--pages/mineAbout/zhaoren/zhaoren.wxml-->
 <van-cell-group>
   <van-field
+    value="{{ value_title }}"
+    clearable
+    label="招募标题"
+    bind:change="onChange_title"
+    placeholder="请输入要招聘的标题"
+  />
+  <van-field
     value="{{ value_position }}"
     clearable
     label="我要招聘"
@@ -27,13 +34,7 @@
     bind:change="onChange_highsalary"
     placeholder="请输入最高月薪要求"
   />
-  <van-field
-    value="{{ value_welfare }}"
-    clearable
-    label="福利待遇"
-    bind:change="onChange_welfare"
-    placeholder="请输入福利待遇"
-  />
+  
   <van-cell-group>
   <van-field
     value="{{ description }}"
@@ -43,7 +44,7 @@
     autosize
     show-word-limit
     bind:change="onChange_description"
-    maxlength="100"
+    maxlength="200"
     border="{{ false }}"
   />
   <van-field
@@ -54,24 +55,104 @@
     placeholder="例如本科，大专，高中，初中"
   />
   <van-field
-    value="{{ value_year }}"
+    value="{{ value_mode }}"
     clearable
-    label="工作年限"
-    bind:change="onChange_year"
-    placeholder="例如一年，两年，三年以上"
+    label="工作模式"
+    bind:change="onChange_mode"
+    placeholder="例如，全职，兼职"
   />
+  <van-field
+    value="{{ value_region }}"
+    clearable
+    label="工作区域"
+    type="textarea"
+    bind:change="onChange_region"
+    placeholder="填写区域"
+  />
+  
   <van-field
     value="{{ value_place }}"
     clearable
-    label="工作地点"
+    label="具体区域"
     type="textarea"
     bind:change="onChange_place"
     placeholder="完善详细地址"
-    icon="location-o"
-    show-word-limit
-    maxlength="50"
-    autosize
   />
+  <van-field
+    value="{{ value_corporateName }}"
+    clearable
+    label="公司名称"
+    type="textarea"
+    bind:change="onChange_corporateName"
+    placeholder="填写公司名称"
+  />
+  <!-- 福利 -->
+  <van-field
+    value="{{ value_welfare1 }}"
+    clearable
+    label="福利1"
+    type="textarea"
+    bind:change="onChange_welfare1"
+    placeholder="填写公司福利"
+  />
+  <van-field
+    value="{{ value_welfare2 }}"
+    clearable
+    label="福利2"
+    type="textarea"
+    bind:change="onChange_welfare2"
+    placeholder="填写公司福利"
+  />
+  <van-field
+    value="{{ value_welfare3 }}"
+    clearable
+    label="福利3"
+    type="textarea"
+    bind:change="onChange_welfare3"
+    placeholder="填写公司福利"
+  />
+  <van-field
+    value="{{ value_welfare4 }}"
+    clearable
+    label="福利4"
+    type="textarea"
+    bind:change="onChange_welfare4"
+    placeholder="填写公司福利"
+  />
+  <van-field
+    value="{{ value_welfare5 }}"
+    clearable
+    label="福利5"
+    type="textarea"
+    bind:change="onChange_welfare5"
+    placeholder="填写公司福利"
+  />
+  <!-- 标签 -->
+  <van-field
+    value="{{ value_label1 }}"
+    clearable
+    label="标签1"
+    type="textarea"
+    bind:change="onChange_label1"
+    placeholder="填写公司标签"
+  />
+  <van-field
+    value="{{ value_label2 }}"
+    clearable
+    label="标签2"
+    type="textarea"
+    bind:change="onChange_label2"
+    placeholder="填写公司标签"
+  />
+  <van-field
+    value="{{ value_label3 }}"
+    clearable
+    label="标签3"
+    type="textarea"
+    bind:change="onChange_label3"
+    placeholder="填写公司标签"
+  />
+  <!--  -->
   <van-field
     value="{{ value_number }}"
     clearable

@@ -14,33 +14,55 @@
 }
 /* 昵称&最后一条消息&分割线 */
 .MLCon1{
-    width: 400rpx;
     margin-top: 20rpx;
     margin-left: 20rpx;
-    display: grid;
+    display: flex;
 }
 .MLCon1Text1{
     font-size: 30rpx;
     font-weight: 600;
 }
-.MLCon1Text2{
-    font-size: 26rpx;
-    /* 单行文本溢出 */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; 
-}
-
-/* 最后发言时间 */
 .MLCon2{
     display: flex;
-    margin-top: 55rpx;
-    margin-left: 80rpx;
+    margin-left: 90rpx;
+    margin-top: 40rpx;
+    border-radius: 20rpx;
+    display: flex;
+    height: 50rpx;
+    width: 100rpx;
+    background-color: #ff3300;
+}
+.MLCon3{
+    display: flex;
+    margin-left: 40rpx;
+    margin-top: 40rpx;
+    border-radius: 20rpx;
+    display: flex;
+    height: 50rpx;
+    width: 100rpx;
+    background-color: #00cc00;
+}
+.MLCon4{
+    display: flex;
+    margin-left: 40rpx;
+    margin-top: 40rpx;
+    border-radius: 20rpx;
+    display: flex;
+    height: 50rpx;
+    width: 100rpx;
+    background-color: #3399ff;
 }
 .MLCon2Text1{
-    font-size: 30rpx;
-    color: #959494;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 8rpx;
+    margin-left: 24rpx;
+    font-size: 26rpx;
+
 }
+
+
+
 .Line1{
     width:80%;
     margin-left: 20%;
