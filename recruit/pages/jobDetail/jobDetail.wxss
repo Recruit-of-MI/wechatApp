@@ -96,6 +96,7 @@
     margin-left: 30rpx;
 }
 .JDText2{
+    margin-right: 30rpx;
     margin-left: 30rpx;
     font-size: 30rpx;
     color: rgb(116, 113, 113);

@@ -1,1 +1,84 @@
-/* pages/PositionAbout/sshb/sshb.wxss */
+/* pages/PositionAbout/wmy/wmy.wxss *//* pages/PositionAbout/jrjz/jrjz.wxss *//* pages/PositionAbout/fjjz/fjjz.wxss */
+.scrollContaier{
+    margin-top: 30rpx;
+    height: 100%;
+    width: 100%;
+}
+.scrollItem{
+    display: grid;
+    margin-bottom: 20rpx;
+    margin-top: 20rpx;
+}
+.scrollItemText{
+    font-size: 32rpx;
+    font-weight: 600;
+    margin-left: 30rpx;
+}
+.scrollItemCon1{
+    display: flex;
+}
+.scrollItemCon1Text1{
+    margin-left: 30rpx;
+    margin-top: 10rpx;
+    color: #2ED532;
+}
+.scrollItemCon1Text2{
+    font-size: 24rpx;
+    margin-left: 15rpx;
+    margin-top: 15rpx;
+    color: #000;
+}
+.scrollItemCon1Text3{
+    font-size: 24rpx;
+    margin-left: 30rpx;
+    margin-top: 15rpx;
+    color: rgb(235, 104, 104);
+}
+.scrollItemCon2{
+    display: flex;
+}
+.scrollItemBack{
+    display: flex;
+    width: 80rpx;
+    height: 30rpx;
+    margin-left: 30rpx;
+    margin-top: 10rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 10rpx;
+    background-color:#F9F7F7;
+}
+.scrollItemBackText{
+    font-size: 24rpx;
+    margin-left: 16rpx;
+    color: #000;
+}
+.scrollItemCon3{
+    display: flex;
+}
+.scrollItemCon3Text1{
+    font-size: 24rpx;
+    margin-top: 10rpx;
+    margin-left: 30rpx;
+}
+.scrollItemCon3Back{
+    display: flex;
+    width: 60rpx;
+    height: 30rpx;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+    border: 1px rgb(196, 190, 190) solid;
+    border-radius: 10rpx;
+    background-color:#FFFAE3;
+}
+.scrollItemCon3BackText{
+    font-size: 24rpx;
+    margin-left: 6rpx;
+    color: #D5C621;
+}
+.line{
+    margin-top: 30rpx;
+    width:90%;
+    margin-left: 5%;
+    height:2rpx;
+    background:#d3d1d1;
+}

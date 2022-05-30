@@ -1,19 +1,29 @@
-// pages/PositionAbout/gxzq/gxzq.js
+// pages/PositionAbout/fjjz/fjjz.js
+import request from '../../../utils/request'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        // 附近热招
+      jobList:[],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
 
-        
+
+    // 获取附近急招——接口
+    async getJobList(){
+        let jobList = await request('/recruit/getHighPayJob')
+        this.setData({
+          jobList: jobList
+        })
+      },
+    onLoad: function (options) {
+        this.getJobList()
     },
 
     /**

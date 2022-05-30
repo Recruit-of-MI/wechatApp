@@ -21,14 +21,14 @@ Page({
 
     //  获取应聘消息列表
     async getApplyList(){
-        let applyList = await request('/message/apply/show',{userId:'35339119351120778x'})
+        let applyList = await request('/message/getApply',{userID:"deliver1"})
         this.setData({
             applyList
         })
     },
     //  获取面试消息列表
     async getInterviewList(){
-        let interviewList = await request('/message/recruit/show')
+        let interviewList = await request('/message/getRecruit',{userID:"123455a"})
         this.setData({
             interviewList
         })

@@ -7,7 +7,7 @@ Page({
      */
     data: {
         // 附近热招
-      hotJobList:[],
+      jobList:[],
     },
 
     /**
@@ -16,14 +16,14 @@ Page({
 
 
     // 获取附近急招——接口
-    async getHotJob(){
-        let hotJobList = await request('/getHotJob')
+    async getJobList(){
+        let jobList = await request('/recruit/getHotJob',{region:'上城区'})
         this.setData({
-          hotJobList:hotJobList
+          jobList: jobList
         })
       },
     onLoad: function (options) {
-        this.getHotJob()
+        this.getJobList()
     },
 
     /**

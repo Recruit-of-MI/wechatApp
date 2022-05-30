@@ -1,36 +1,29 @@
-// pages/jobDetail/jobDetail.js
-import request from '../../utils/request'
+// pages/PositionAbout/fjjz/fjjz.js
+import request from '../../../utils/request'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-      jobDetailList:[],
+        // 附近热招
+      jobList:[],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-      
-      let jobID = options.jobID
-      this.getJobDetailList(jobID)
 
-    },
-    // 前往聊天页面
-    tojobChat(){
-        wx.navigateTo({
-          url: '/pages/jobChat/jobChat',
+
+    // 获取附近急招——接口
+    async getJobList(){
+        let jobList = await request('/recruit/getDriver')
+        this.setData({
+          jobList: jobList
         })
-    },
-
-    // 获取工作详情
-    async getJobDetailList(JobID){
-      let jobDetailList = await request('/recruit/getSpecificJob',{JobID:JobID})
-      this.setData({
-        jobDetailList
-      })
+      },
+    onLoad: function (options) {
+        this.getJobList()
     },
 
     /**

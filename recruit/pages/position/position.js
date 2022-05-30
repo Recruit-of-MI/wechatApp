@@ -10,7 +10,8 @@ Page({
       currentPlace:'',
       value: '',
       is_select1:false,
-      is_select2:false
+      is_select2:false,
+      jobList:[],
       
       
     },
@@ -31,6 +32,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+      this.getJob()
       
     },
 
@@ -55,9 +57,11 @@ Page({
     },
 
     // 前往工作详情页面
-    tojobDetail(){
+    tojobDetail(event){
+      let {job} = event.currentTarget.dataset;
+      console.log(job.jobID)
       wx.navigateTo({
-        url: '/pages/jobDetail/jobDetail',
+        url: '/pages/jobDetail/jobDetail?jobID=' + job.jobID
       })
     },
 
@@ -65,6 +69,54 @@ Page({
     toFjjz(){
       wx.navigateTo({
         url: '/pages/PositionAbout/fjjz/fjjz',
+      })
+    },
+    //前往今日急招
+    toJrjz(){
+      wx.navigateTo({
+        url: '/pages/PositionAbout/jrjz/jrjz',
+      })
+    },
+    //前往司机
+    toSj(){
+      wx.navigateTo({
+        url: '/pages/PositionAbout/sj/sj',
+      })
+    },
+     //前往日结专区
+     toRjzq(){
+      wx.navigateTo({
+        url: '/pages/PositionAbout/rjzq/rjzq',
+      })
+    },
+    //前往保安
+    toBa(){
+      wx.navigateTo({
+        url: '/pages/PositionAbout/ba/ba',
+      })
+    },
+    //前往外卖员
+    toWmy(){
+      wx.navigateTo({
+        url: '/pages/PositionAbout/wmy/wmy',
+      })
+    },
+    //前往外卖员
+    toJz(){
+      wx.navigateTo({
+        url: '/pages/PositionAbout/jz/jz',
+      })
+    },
+    //前往食宿话补
+    toSshb(){
+      wx.navigateTo({
+        url: '/pages/PositionAbout/sshb/sshb',
+      })
+    },
+    //前往高薪职位
+    toGxzq(){
+      wx.navigateTo({
+        url: '/pages/PositionAbout/gxzq/gxzq',
       })
     },
     
@@ -87,6 +139,14 @@ Page({
       this.setData({
         is_select2:true,
         is_select1:false
+      })
+    },
+    
+    // 获取猜你喜欢页面推荐
+    async getJob(){
+      let jobList = await request('/recruit/getJob')
+      this.setData({
+        jobList
       })
     },
 

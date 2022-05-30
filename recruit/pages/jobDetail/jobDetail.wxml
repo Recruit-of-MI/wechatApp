@@ -5,25 +5,25 @@
     <view class="jobIntroduction">
         <!-- 工作名称和薪资 -->
         <view class="JICon1">
-            <text class="JICon1Text1">销售代表</text>
-            <text class="JICon1Text2">16000-32000元</text>
+            <text class="JICon1Text1">{{jobDetailList.recruitPosition}}</text>
+            <text class="JICon1Text2">{{jobDetailList.minWages}}-{{jobDetailList.maxWages}}元</text>
         </view>
         <!-- 位置和学历要求 -->
         <view class="JICon2">
-            <text class="iconfont icon-dingwei1 JICon2Text1">杭州·江干区</text>
-            <text class="iconfont icon-gongwenbao JICon2Text2">大专·全职</text>
+            <text class="iconfont icon-dingwei1 JICon2Text1">杭州·{{jobDetailList.region}}</text>
+            <text class="iconfont icon-gongwenbao JICon2Text2">{{jobDetailList.minEducation}}·{{jobDetailList.mode}}</text>
         </view>
         <!-- 经理头像&名字&职位 -->
         <view class="JICon3">
-            <image class="JICon3Avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/n7pl10NRqpZqvNhQKtOQwlyUqmjB1RY2obJh0g5Cic4WRfFNx5mxAjchpMYbTsKpJIqW9jnIOfQJKqF3USxSULg/132">
+            <image class="JICon3Avatar" src="{{jobDetailList.publisherAvatarUrl}}">
             </image>
             <view class="JICon3Con1">
                 <view class="JICon3Con1Con1">
-                    <text class="JICon3Con1Con1Text1">张三</text>
+                    <text class="JICon3Con1Con1Text1">{{jobDetailList.publisherName}}</text>
                     <text class="JICon3Con1Con1Text2">/人力资源经理</text>
                 </view>
                 <view class="JICon3Con1Con2">
-                    <text class="JICon3Con1Con2Text1">杭州六六六房地产有限公司</text>
+                    <text class="JICon3Con1Con2Text1">{{jobDetailList.corporateName}}</text>
                 </view>
             </view>
             <text class="iconfont icon-shoucang1 JICon3Icon"></text>
@@ -36,15 +36,7 @@
     <view class="jobDescription">
         <text class="JDText1">职位描述</text>
         <text class="JDText2">
-            一、岗位职责
-            1、年龄20岁以上，秘书、中文等相关专业中专以上学历。
-            2、身高160cm以上，五官端正，外在形象气质佳。
-            3、1年以上行政人事、文秘或相关工作经验。
-            二、任职资格
-            1、良好沟通表达能力，待人亲和，热情。
-            2、熟练使用办公软件、办公自动化设备。
-            3、工作细致认真，谨慎细心，积极主动；
-            4、工作效率高，责任心、执行力强，具有团队精神；
+            {{jobDetailList.jobDescription}}
         </text>
         <!-- 分割线 -->
         <view class="jobDescriptionLine"></view>
@@ -53,13 +45,22 @@
     <view class="jobBenefits">
         <text class="JBText1">职位福利</text>
         <view class="JBCon2" >
-            <view class="JBCon1" wx:for="{{4}}">
-                <text class="JBCon1Text1">五险一金</text>
+            <view wx:if="{{jobDetailList.welfare1}}" class="JBCon1">
+                <text class="JBCon1Text1">{{jobDetailList.welfare1}}</text>
+            </view>
+            <view wx:if="{{jobDetailList.welfare2}}" class="JBCon1">
+                <text class="JBCon1Text1">{{jobDetailList.welfare2}}</text>
+            </view>
+            <view wx:if="{{jobDetailList.welfare3}}" class="JBCon1">
+                <text class="JBCon1Text1">{{jobDetailList.welfare3}}</text>
+            </view>
+            <view wx:if="{{jobDetailList.welfare4}}" class="JBCon1">
+                <text class="JBCon1Text1">{{jobDetailList.welfare4}}</text>
             </view>
         </view>
-        <view class="JBCon2" >
-            <view class="JBCon1" wx:for="{{3}}">
-                <text class="JBCon1Text1">五险一金</text>
+        <view wx:if="{{jobDetailList.welfare5}}" class="JBCon2" >
+            <view class="JBCon1">
+                <text class="JBCon1Text1">{{jobDetailList.welfare5}}</text>
             </view>
         </view>
          <!-- 分割线 -->

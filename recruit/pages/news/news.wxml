@@ -11,7 +11,7 @@
     </view>
 </view>
 <!-- 消息 消息列表 -->
-<view wx:if="{{isChecked1}}" wx:for="{{applyList.data.list}}" bindtap="tojobChat">
+<view wx:if="{{isChecked1}}" wx:for="{{applyList}}" bindtap="tojobChat">
     <view class="messageListContainer" >
     <!-- 头像 -->
     <image class="messageListContainerAvatar" src="{{item.otherAvatarUrl}}">
@@ -30,14 +30,14 @@
 </view>
 
 <!-- 面试 消息列表列 -->
-<view wx:if="{{isChecked2}}" wx:for="{{interviewList.data.list}}" bindtap="tojobChat">
+<view wx:if="{{isChecked2}}" wx:for="{{interviewList}}" bindtap="tojobChat">
     <view class="messageListContainer" >
     <!-- 头像 -->
-    <image class="messageListContainerAvatar" src="{{item.avatarUrl}}">
+    <image class="messageListContainerAvatar" src="{{item.otherAvatarUrl}}">
     </image>
     <!-- 昵称&最后一条消息 -->
     <view class="MLCon1">
-        <text class="MLCon1Text1">{{item.username}}</text>
+        <text class="MLCon1Text1">{{item.otherUserName}}</text>
         <text class="MLCon1Text2">{{item.latestMessage}}</text>
     </view>
     <!-- 最后发言时间 -->

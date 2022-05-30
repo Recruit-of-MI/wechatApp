@@ -1,23 +1,19 @@
 {
     "pages": [
+        "pages/position/position",
         "pages/mineAbout/publishedDetail/publishedDetail",
         "pages/mine/mine",
         "pages/mineAbout/zhaoren/zhaoren",
-        
         "pages/mineAbout/resume/resume",
-        "pages/position/position",
-       
         "pages/index/index",
         "pages/jobChat/jobChat",
         "pages/jobChat_copy/jobChat_copy",
         "pages/news/news",
         "pages/PositionAbout/fjjz/fjjz",
         "pages/PositionAbout/gxzq/gxzq",
-        
         "pages/mineAbout/setting/setting",
         "pages/jobDetail/jobDetail",
         "pages/mineAbout/history/history",
-        
         "pages/mineAbout/published/published",
         "pages/mineAbout/deliveredDetail/deliveredDetail",
         "pages/mineAbout/delivered/delivered",
@@ -28,7 +24,11 @@
         "pages/PositionAbout/rjzq/rjzq",
         "pages/PositionAbout/sshb/sshb",
         "pages/PositionAbout/mqzq/mqzq",
-        "pages/mineAbout/collection/collection"
+        "pages/mineAbout/collection/collection",
+        "pages/PositionAbout/sj/sj",
+        "pages/PositionAbout/ba/ba",
+        "pages/PositionAbout/wmy/wmy",
+        "pages/PositionAbout/jz/jz"
     ],
     "window": {
         "backgroundTextStyle": "light",

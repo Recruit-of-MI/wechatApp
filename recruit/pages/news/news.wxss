@@ -119,7 +119,7 @@
     margin-left: 80rpx;
 }
 .MLCon2Text1{
-    font-size: 30rpx;
+    font-size: 24rpx;
     color: #959494;
 }
 .Line1{
