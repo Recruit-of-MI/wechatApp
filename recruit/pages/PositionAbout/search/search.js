@@ -22,25 +22,34 @@ Page({
         // 将搜索的关键字添加到搜索历史记录中
         let {value, historyList} = this.data;
         if(historyList.length>7){
-          if(historyList.indexOf(value) !== -1){
-            historyList.splice(historyList.indexOf(value), 1)
+          if(value.length>0){
+            if(historyList.indexOf(value) !== -1){
+              historyList.splice(historyList.indexOf(value), 1)
+            }
+            historyList.splice(7,1)
+            historyList.unshift(value)
+            this.setData({
+                historyList
+            })
+            wx.setStorageSync('searchHistory', historyList)
           }
-          historyList.splice(7,1)
-          historyList.unshift(value)
-          this.setData({
-              historyList
-          })
-          wx.setStorageSync('searchHistory', historyList)
+          
         }else{
-          if(historyList.indexOf(value) !== -1){
-            historyList.splice(historyList.indexOf(value), 1)
+          if(value.length>0){
+            if(historyList.indexOf(value) !== -1){
+              historyList.splice(historyList.indexOf(value), 1)
+            }
+            historyList.unshift(value)
+            this.setData({
+                historyList
+            })
+            wx.setStorageSync('searchHistory', historyList)
           }
-          historyList.unshift(value)
-          this.setData({
-              historyList
-          })
-          wx.setStorageSync('searchHistory', historyList)
+          
         }
+        wx.navigateTo({
+          url: '/pages/PositionAbout/searchDetail/searchDetail',
+        })
       
       },
 

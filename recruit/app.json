@@ -28,7 +28,8 @@
         "pages/PositionAbout/sj/sj",
         "pages/PositionAbout/ba/ba",
         "pages/PositionAbout/wmy/wmy",
-        "pages/PositionAbout/jz/jz"
+        "pages/PositionAbout/jz/jz",
+        "pages/PositionAbout/searchDetail/searchDetail"
     ],
     "window": {
         "backgroundTextStyle": "light",

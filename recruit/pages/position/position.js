@@ -119,6 +119,7 @@ Page({
         url: '/pages/PositionAbout/gxzq/gxzq',
       })
     },
+
     
     // 前往名企专区
     toMqzq(){
@@ -126,6 +127,8 @@ Page({
         url: '/pages/PositionAbout/mqzq/mqzq',
       })
     },
+
+    
 
     // 点击最新按钮
     zuixinBind(){
