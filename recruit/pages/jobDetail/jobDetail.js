@@ -7,6 +7,7 @@ Page({
      */
     data: {
       jobDetailList:[],
+      isagree:false,
     },
 
     /**
@@ -16,6 +17,7 @@ Page({
       
       let jobID = options.jobID
       this.getJobDetailList(jobID)
+      this.getIsagree(jobID)
 
     },
     // 前往聊天页面
@@ -31,6 +33,15 @@ Page({
       this.setData({
         jobDetailList
       })
+    },
+    //查看是否收藏
+    async getIsagree(jobID){
+      let agreeList = await request('/recruit/getCollect',{userID:'123456a',jobID})
+      if(agreeList){
+        this.setData({
+          isagree:true
+        })
+      }
     },
 
     /**

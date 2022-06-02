@@ -21,15 +21,15 @@
     <!-- 单个消息2 用户发出（右） -->
     <view wx:else id='msg-{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
     
-      <view wx:if="{{item.contentType=='text'}}" class='rightMsg'>{{item.content}}</view>
+      <view wx:if="{{item.contentType=='1'}}" class='rightMsg'>{{item.content}}</view>
       <!-- 图片 -->
-      <image wx:if="{{item.contentType=='image'}}" data-index="{{index}}" bindtap="showPic" class="rightMsg" src="{{item.content}}" ></image>
+      <image wx:if="{{item.contentType=='2'}}" data-index="{{index}}" bindtap="showPic" class="rightMsg" src="{{item.content}}" ></image>
       <!--  -->
       <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
         <image style='width: 4vw;' src='/static/images/right_msg.png' mode='widthFix'></image>
       </view>
       <view style='width: 11vw; height: 11vw;'>
-        <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202007%2F04%2F20200704075609_ejqjf.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653358414&t=cda3c92141ea55cacab409b10a5bf09f'></image>
+        <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{avatarUrl}}'></image>
       </view>
     </view>
 

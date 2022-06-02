@@ -1,17 +1,19 @@
 // pages/mineAbout/delivered/delivered.js
+import request from '../../../utils/request'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      deliverList:[],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+      this.getDeliverList()
 
     },
 
@@ -20,6 +22,13 @@ Page({
         wx.navigateTo({
           url: '/pages/mineAbout/deliveredDetail/deliveredDetail',
         })
+    },
+    //获取已投递列表
+    async getDeliverList(){
+      let deliverList = await request('/recruit/getDelivered',{userID:'deliver1'})
+      this.setData({
+        deliverList
+      })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

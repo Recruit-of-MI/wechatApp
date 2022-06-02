@@ -1,15 +1,17 @@
 <!--pages/mineAbout/delivered/delivered.wxml-->
 <view class="delivered">
-    <scroll-view class="deliveredScroll" wx:for="{{3}}" bindtap="deliveredDetail">
+    <scroll-view class="deliveredScroll" wx:for="{{deliverList}}" bindtap="deliveredDetail">
         <view class="deliveredCon1">
-        <text class="deliveredCon1Text1">小王子食品厂</text>
-        <text class="deliveredCon1Text2">江干区·学正街18号</text>
+        <text class="deliveredCon1Text1">{{item.job.corporateName}}</text>
+        <text class="deliveredCon1Text2">{{item.job.region}}·{{item.job.specificLocation}}</text>
     </view>
     <view class="deliveredCon2">
         <text class="deliveredCon2Text1">薪资:</text>
-        <text class="deliveredCon2Text2">8000-16000元</text>
+        <text class="deliveredCon2Text2">{{item.job.minWages}}-{{item.job.maxWages}}元</text>
         <text class="deliveredCon2Text3">投递状态:</text>
-        <text class="deliveredCon2Text4">成功</text>
+        <text wx:if="{{item.isAgree == 1}}" class="deliveredCon2Text4">成功</text>
+        <text wx:if="{{item.isAgree == 2}}"class="deliveredCon2Text5">失败</text>
+        <text wx:if="{{item.isAgree == 0}}"class="deliveredCon2Text6">待录取</text>
     </view>
     </scroll-view>
     

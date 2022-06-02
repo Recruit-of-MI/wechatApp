@@ -1,15 +1,15 @@
 <!--pages/mineAbout/delivered/delivered.wxml-->
 <view class="published">
-    <scroll-view class="publishedScroll" wx:for="{{3}}" bindtap="publishedDetail">
+    <scroll-view class="publishedScroll" wx:for="{{publishList}}" bindtap="publishedDetail">
         <view class="publishedCon1">
-        <text class="publishedCon1Text1">小王子食品厂</text>
-        <text class="publishedCon1Text2">江干区·学正街18号</text>
+        <text class="publishedCon1Text1">{{item.corporateName}}</text>
+        <text class="publishedCon1Text2">{{item.region}}·{{item.specificLocation}}</text>
     </view>
     <view class="publishedCon2">
         <text class="publishedCon2Text1">招募职位:</text>
-        <text class="publishedCon2Text2">普通工人</text>
+        <text class="publishedCon2Text2">{{item.recruitPosition}}</text>
         <text class="publishedCon2Text3">招募人数:</text>
-        <text class="publishedCon2Text4">5名</text>
+        <text class="publishedCon2Text4">{{item.recruitNum}}名</text>
     </view>
     </scroll-view>
     

@@ -7,30 +7,31 @@ var windowWidth = wx.getSystemInfoSync().windowWidth;
 var windowHeight = wx.getSystemInfoSync().windowHeight;
 var keyHeight = 0;
 
+import request from '../../utils/request'
 /**
  * 初始化数据
  */
 function initData(that) {
-  inputVal = '';
+  inputVal = '',
 
-  msgList = [{
-      speaker: 'server',
-      contentType: 'text',
-      content: '请介绍一下你自己'
-    },
-    {
-      speaker: 'customer',
-      contentType: 'text',
-      content: '我是张三...'
-    },
-    {
-      speaker: 'server',
-      contentType: 'image',
-      content: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202007%2F04%2F20200704075609_ejqjf.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653358414&t=cda3c92141ea55cacab409b10a5bf09f'
-    }
-  ]
+  //  msgList = [{
+  //     speaker: 'server',
+  //     contentType: 'text',
+  //     content: '请介绍一下你自己'
+  //   },
+  //   {
+  //     speaker: 'customer',
+  //     contentType: 'text',
+  //     content: '我是张三...'
+  //   },
+  //   {
+  //     speaker: 'server',
+  //     contentType: 'image',
+  //     content: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202007%2F04%2F20200704075609_ejqjf.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653358414&t=cda3c92141ea55cacab409b10a5bf09f'
+  //   }
+  // ]
   that.setData({
-    msgList,
+    // msgList,
     inputVal
   })
 }
@@ -51,8 +52,18 @@ Page({
    */
   data: {
     scrollHeight: '100vh',
-    inputBottom: 0
+    inputBottom: 0,
+    msgList:[],
+    avatarUrl:'',
   },
+
+    //聊天消息获取
+    async getMsgList(){
+      let msgList = await request('/message/getChat',{userID: "123455a",otherID: "deliver1"})
+      this.setData({
+        msgList
+      })
+    },
 
 
     // 选择图片
@@ -84,10 +95,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    initData(this);
+    let userInfo = wx.getStorageSync('userinfo')
+    let avatarUrl = userInfo.avatarUrl
     this.setData({
-      cusHeadIcon: app.globalData.userInfo.avatarUrl,
-    });
+      avatarUrl
+    })
+    initData(this);
+    // this.setData({
+    //   cusHeadIcon: app.globalData.userInfo.avatarUrl,
+    // });
+    this.getMsgList()
   },
 
   /**

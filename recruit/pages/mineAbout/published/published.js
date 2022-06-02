@@ -1,18 +1,19 @@
 // pages/mineAbout/published/published.js
+import request from '../../../utils/request'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      publishList:[],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      this.getPublishList()
     },
 
     // 前往已发布详情页面
@@ -21,6 +22,15 @@ Page({
           url: '/pages/mineAbout/publishedDetail/publishedDetail',
         })
     },
+
+    //获取已发布列表
+    async getPublishList(){
+      let publishList = await request('/recruit/getSend',{userID:"123455a"})
+      this.setData({
+        publishList
+      })
+    },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
