@@ -1,4 +1,5 @@
 // pages/mineAbout/resume/resume.js
+import upload from '../../../utils/upload'
 Page({
 
     /**
@@ -163,35 +164,42 @@ Page({
   
     // 申请确认
     application(){
-      let {value_realName,value_Phone,value_Position,radio,value_Year,value_Education,value_Time,value_Protect} = this.data
-      // 手机号验证
-      if(!value_Phone){
-        //提示用户
-        wx.showToast({
-          title: '手机号为空',
-          icon: 'error'
-        })
-        this.setData({
-          is_ok:false
-        })
-        return;
-       }
-       //定义正则表达式
-       let phoneNumReg = /^1(3|4|5|6|7|8|9)\d{9}$/;
-       if(!phoneNumReg.test(value_Phone)){
-        wx.showToast({
-          title: '手机号格式错误',
-          icon: 'error'
-        })
-        this.setData({
-          is_ok:false
-        })
-        return;
-       }else{
-         this.setData({
-           is_ok:true
-         })
-       }
+      // let {value_realName,value_Phone,value_Position,radio,value_Year,value_Education,value_Time,value_Protect} = this.data
+      // // 手机号验证
+      // if(!value_Phone){
+      //   //提示用户
+      //   wx.showToast({
+      //     title: '手机号为空',
+      //     icon: 'error'
+      //   })
+      //   this.setData({
+      //     is_ok:false
+      //   })
+      //   return;
+      //  }
+      //  //定义正则表达式
+      //  let phoneNumReg = /^1(3|4|5|6|7|8|9)\d{9}$/;
+      //  if(!phoneNumReg.test(value_Phone)){
+      //   wx.showToast({
+      //     title: '手机号格式错误',
+      //     icon: 'error'
+      //   })
+      //   this.setData({
+      //     is_ok:false
+      //   })
+      //   return;
+      //  }else{
+      //    this.setData({
+      //      is_ok:true
+      //    })
+      //  }
+      
+       this.uploadResume()
+       console.log("点击成功")
+    },
+    async uploadResume(){
+      await upload('/user/createResume',{userID:'123',realName:'冯子豪',phoneNum:'18668218627',birthYear:'1999年',education:'高中',workYear:'1-3年',intentionJob:'司机',privacy:'1'})
+      console.log("简历更新成功")
     },
 
     // ——————————————————————————————————————

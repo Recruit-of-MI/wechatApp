@@ -1,10 +1,12 @@
 {
     "pages": [
+        "pages/mine/mine",
+        "pages/mineAbout/resume/resume",
         "pages/position/position",
         "pages/mineAbout/publishedDetail/publishedDetail",
-        "pages/mine/mine",
+      
         "pages/mineAbout/zhaoren/zhaoren",
-        "pages/mineAbout/resume/resume",
+        
         "pages/index/index",
         "pages/jobChat/jobChat",
         "pages/jobChat_copy/jobChat_copy",

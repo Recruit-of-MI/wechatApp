@@ -1,5 +1,6 @@
 // pages/mine/mine.js
 import config from '../../utils/config'
+import upload from '../../utils/upload'
 Page({
 
     /**
@@ -75,8 +76,18 @@ Page({
               canIUseGetUserProfile: true
             })
           }
+          let userInfo = wx.getStorageSync('userinfo')
+          if(userInfo){
+            let openId = wx.getStorageSync('openId')
+            this.uploadUserInfo(openId,userInfo.nickName,userInfo.avatarUrl)
+          }
         //   ——————————————————————————————
 
+    },
+
+    //上传微信信息
+    async uploadUserInfo(userID,userName,avatarUrl){
+      await upload('/user/createUser',{userID,userName,avatarUrl})
     },
 
     // 获取微信用户信息
@@ -97,7 +108,6 @@ Page({
                //获取code
                success: function (res) {
                  var code = res.code; //返回code
-                 console.log(code);
                  wx.request({
                    url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + config.appId + '&secret=' + config.secret + '&js_code=' + code + '&grant_type=authorization_code',
                    data: {},
