@@ -5,9 +5,9 @@
   <block wx:key wx:for='{{msgList}}' wx:for-index="index">
 
     <!-- 单个消息1 客服发出（左） -->
-    <view wx:if='{{item.speaker=="server"}}' id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+    <view wx:if='{{item.speaker==otherID}}' id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
       <view style='width: 11vw; height: 11vw;'>
-        <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202004%2F08%2F20200408212550_iyhhb.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653358420&t=3b1bb9acb384e68f1a2842b9b498641b'></image>
+        <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{item.otherAvatarUrl}}'></image>
       </view>
       <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'>
         <image style='width: 4vw;' src='/static/images/left_msg.png' mode='widthFix'></image>
@@ -19,18 +19,20 @@
     </view>
 
     <!-- 单个消息2 用户发出（右） -->
-    <view wx:else id='msg-{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
-    
-      <view wx:if="{{item.contentType=='1'}}" class='rightMsg'>{{item.content}}</view>
-      <!-- 图片 -->
-      <image wx:if="{{item.contentType=='2'}}" data-index="{{index}}" bindtap="showPic" class="rightMsg" src="{{item.content}}" ></image>
-      <!--  -->
-      <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
-        <image style='width: 4vw;' src='/static/images/right_msg.png' mode='widthFix'></image>
+    <view wx:else id='msg-{{index}}'  style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
+      <view style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;' wx:if="{{item.speaker==openId}}">
+          <view wx:if="{{item.contentType=='text'}}" class='rightMsg'>{{item.content}}</view>
+        <!-- 图片 -->
+        <image wx:if="{{item.contentType=='image'}}" data-index="{{index}}" bindtap="showPic" class="rightMsg" src="{{item.content}}" ></image>
+        <!--  -->
+        <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+          <image style='width: 4vw;' src='/static/images/right_msg.png' mode='widthFix'></image>
+        </view>
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{avatarUrl}}'></image>
+        </view>
       </view>
-      <view style='width: 11vw; height: 11vw;'>
-        <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{avatarUrl}}'></image>
-      </view>
+      
     </view>
 
   </block>

@@ -1,11 +1,11 @@
 <!--pages/mineAbout/resume/resume.wxml-->
 <!-- 头像、姓名、性别 -->
 <view class="resumeBasicInfo">
-    <view class="RBICon1">
+    <view class="RBICon1" bindtap="selectImage">
         <image 
-            class="RBICon1avatar" src='{{userInfo.avatarUrl?userInfo.avatarUrl:"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F01%2F55%2F09%2F4557474d965eb71.jpg&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652326801&t=246ba216bd67b12cce71058d67f15f83"}}'>
+            class="RBICon1avatar" src='{{value_Avatal?value_Avatal:"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F01%2F55%2F09%2F4557474d965eb71.jpg&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652326801&t=246ba216bd67b12cce71058d67f15f83"}}'>
         </image>
-        <text class="RBICon1Text1">编辑头像</text>
+        <text wx:if="{{!value_Avatal}}" class="RBICon1Text1">编辑头像</text>
     </view>
     <view class="RBICon2">
         <van-cell-group class="RBICon2Input">

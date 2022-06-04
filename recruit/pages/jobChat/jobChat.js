@@ -8,6 +8,7 @@ var windowHeight = wx.getSystemInfoSync().windowHeight;
 var keyHeight = 0;
 
 import request from '../../utils/request'
+import upload from '../../utils/upload'
 /**
  * 初始化数据
  */
@@ -55,13 +56,38 @@ Page({
     inputBottom: 0,
     msgList:[],
     avatarUrl:'',
+    otherID:'',
+    openId:'',
+    otherUserList:[],
   },
 
     //聊天消息获取
     async getMsgList(){
-      let msgList = await request('/message/getChat',{userID: "123455a",otherID: "deliver1"})
+      let msgList = await request('/message/getChat',{userID: "oVes-48ZmdjSke7_TKGsBHJ2g8fc",otherID: "123455a"})
       this.setData({
         msgList
+      })
+    },
+    //聊天消息上传
+    async uploadMsg(content){
+     
+      let openId = wx.getStorageSync('openId')
+      let userInfo = wx.getStorageSync('userinfo')
+      let otherID = this.data.otherID
+      let otherUserList = this.data.otherUserList
+     // let 
+      //对方ID
+     
+      await upload('/message/createChat',{userID:openId,otherID:otherID,userName:userInfo.nickName,avatarUrl:userInfo.avatarUrl,otherUserName:otherUserList.userName,otherAvatarUrl:otherUserList.avatarUrl,speaker:openId,contentType:'text',content:content})
+      console.log("上传成功")
+    },
+
+    //对方信息获取
+    async getOtherUser(){
+      let otherID = this.data.otherID
+      let otherUserList = await request('/user/getUser',{userID:otherID})
+      this.setData({
+        otherUserList
       })
     },
 
@@ -95,6 +121,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    let openId = wx.getStorageSync('openId')
+    this.setData({
+      openId
+    })
+    let otherID = options.otherID
+    this.setData({
+      otherID
+    })
     let userInfo = wx.getStorageSync('userinfo')
     let avatarUrl = userInfo.avatarUrl
     this.setData({
@@ -105,6 +139,8 @@ Page({
     //   cusHeadIcon: app.globalData.userInfo.avatarUrl,
     // });
     this.getMsgList()
+    this.getOtherUser()
+   
   },
 
   /**
@@ -184,6 +220,7 @@ Page({
       });
     }
     flag = false
+    this.uploadMsg(e.detail.value)
 
 
   },

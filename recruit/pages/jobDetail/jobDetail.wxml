@@ -5,25 +5,25 @@
     <view class="jobIntroduction">
         <!-- 工作名称和薪资 -->
         <view class="JICon1">
-            <text class="JICon1Text1">{{jobDetailList.recruitPosition}}</text>
-            <text class="JICon1Text2">{{jobDetailList.minWages}}-{{jobDetailList.maxWages}}元</text>
+            <text class="JICon1Text1">{{jobDetailList.job.recruitPosition}}</text>
+            <text class="JICon1Text2">{{jobDetailList.job.minWages}}-{{jobDetailList.job.maxWages}}元</text>
         </view>
         <!-- 位置和学历要求 -->
         <view class="JICon2">
-            <text class="iconfont icon-dingwei1 JICon2Text1">杭州·{{jobDetailList.region}}</text>
-            <text class="iconfont icon-gongwenbao JICon2Text2">{{jobDetailList.minEducation}}·{{jobDetailList.mode}}</text>
+            <text class="iconfont icon-dingwei1 JICon2Text1">杭州·{{jobDetailList.job.region}}</text>
+            <text class="iconfont icon-gongwenbao JICon2Text2">{{jobDetailList.job.minEducation}}·{{jobDetailList.job.mode}}</text>
         </view>
         <!-- 经理头像&名字&职位 -->
         <view class="JICon3">
-            <image class="JICon3Avatar" src="{{jobDetailList.publisherAvatarUrl}}">
+            <image class="JICon3Avatar" src="{{jobDetailList.job.publisherAvatarUrl}}">
             </image>
             <view class="JICon3Con1">
                 <view class="JICon3Con1Con1">
-                    <text class="JICon3Con1Con1Text1">{{jobDetailList.publisherName}}</text>
+                    <text class="JICon3Con1Con1Text1">{{jobDetailList.job.publisherName}}</text>
                     <text class="JICon3Con1Con1Text2">/人力资源经理</text>
                 </view>
                 <view class="JICon3Con1Con2">
-                    <text class="JICon3Con1Con2Text1">{{jobDetailList.corporateName}}</text>
+                    <text class="JICon3Con1Con2Text1">{{jobDetailList.job.corporateName}}</text>
                 </view>
             </view>
             <text class="iconfont icon-shoucang1 JICon3Icon"></text>
@@ -36,7 +36,7 @@
     <view class="jobDescription">
         <text class="JDText1">职位描述</text>
         <text class="JDText2">
-            {{jobDetailList.jobDescription}}
+            {{jobDetailList.job.jobDescription}}
         </text>
         <!-- 分割线 -->
         <view class="jobDescriptionLine"></view>
@@ -46,21 +46,21 @@
         <text class="JBText1">职位福利</text>
         <view class="JBCon2" >
             <view wx:if="{{jobDetailList.welfare1}}" class="JBCon1">
-                <text class="JBCon1Text1">{{jobDetailList.welfare1}}</text>
+                <text class="JBCon1Text1">{{jobDetailList.job.welfare1}}</text>
             </view>
             <view wx:if="{{jobDetailList.welfare2}}" class="JBCon1">
-                <text class="JBCon1Text1">{{jobDetailList.welfare2}}</text>
+                <text class="JBCon1Text1">{{jobDetailList.job.welfare2}}</text>
             </view>
             <view wx:if="{{jobDetailList.welfare3}}" class="JBCon1">
-                <text class="JBCon1Text1">{{jobDetailList.welfare3}}</text>
+                <text class="JBCon1Text1">{{jobDetailList.job.welfare3}}</text>
             </view>
             <view wx:if="{{jobDetailList.welfare4}}" class="JBCon1">
-                <text class="JBCon1Text1">{{jobDetailList.welfare4}}</text>
+                <text class="JBCon1Text1">{{jobDetailList.job.welfare4}}</text>
             </view>
         </view>
         <view wx:if="{{jobDetailList.welfare5}}" class="JBCon2" >
             <view class="JBCon1">
-                <text class="JBCon1Text1">{{jobDetailList.welfare5}}</text>
+                <text class="JBCon1Text1">{{jobDetailList.job.welfare5}}</text>
             </view>
         </view>
          <!-- 分割线 -->
@@ -68,7 +68,7 @@
     </view>
     <!-- 申请和聊天 -->
     <view class="application">
-        <view class="applicationCon1">
+        <view class="applicationCon1" bindtap="applyJob">
             <text class="applicationCon1Text1">申请</text>
         </view>
         <view class="applicationCon2" bindtap="tojobChat">

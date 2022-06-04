@@ -11,7 +11,7 @@
     </view>
 </view>
 <!-- 消息 消息列表 -->
-<view wx:if="{{isChecked1}}" wx:for="{{applyList}}" bindtap="tojobChat">
+<view wx:if="{{isChecked1}}" wx:for="{{applyList}}" bindtap="tojobChat" data-index="{{index}}" data-info="{{item}}">
     <view class="messageListContainer" >
     <!-- 头像 -->
     <image class="messageListContainerAvatar" src="{{item.otherAvatarUrl}}">
@@ -30,7 +30,7 @@
 </view>
 
 <!-- 面试 消息列表列 -->
-<view wx:if="{{isChecked2}}" wx:for="{{interviewList}}" bindtap="tojobChat">
+<view wx:if="{{isChecked2}}" wx:for="{{interviewList}}" bindtap="tojobChat" data-index="{{index}}" data-info="{{item}}">
     <view class="messageListContainer" >
     <!-- 头像 -->
     <image class="messageListContainerAvatar" src="{{item.otherAvatarUrl}}">

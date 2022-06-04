@@ -1,5 +1,6 @@
 // pages/jobDetail/jobDetail.js
 import request from '../../utils/request'
+import upload from '../../utils/upload'
 Page({
 
     /**
@@ -20,16 +21,28 @@ Page({
       this.getIsagree(jobID)
 
     },
+
+    //申请聊天
+
+
     // 前往聊天页面
-    tojobChat(){
-        wx.navigateTo({
-          url: '/pages/jobChat/jobChat',
+    async tojobChat(){
+        let userID = wx.getStorageSync('openId')
+        let otherID = this.data.jobDetailList.job.userID
+        let otherAvatarUrl = this.data.jobDetailList.job.publisherAvatarUrl
+        let otherUserName = this.data.jobDetailList.job.publisherName
+        let userInfo = wx.getStorageSync('userinfo')
+
+        await upload('/message/createApply',{userID,otherID,otherAvatarUrl,otherUserName,latestMessage:''})
+        await upload('/message/createRecruit',{userID:otherID,otherID:userID,otherAvatarUrl:userInfo.avatarUrl,otherUserName:userInfo.nickName,latestMessage:''})
+        wx.reLaunch({
+          url: '/pages/news/news',
         })
     },
 
     // 获取工作详情
     async getJobDetailList(JobID){
-      let jobDetailList = await request('/recruit/getSpecificJob',{JobID:JobID})
+      let jobDetailList = await request('/recruit/getSpecificJobOfUser',{JobID:JobID,userID:'123455a'})
       this.setData({
         jobDetailList
       })

@@ -21,14 +21,14 @@ Page({
 
     //  获取应聘消息列表
     async getApplyList(){
-        let applyList = await request('/message/getApply',{userID:"deliver1"})
+        let applyList = await request('/message/getApply',{userID:"oVes-48ZmdjSke7_TKGsBHJ2g8fc"})
         this.setData({
             applyList
         })
     },
     //  获取面试消息列表
     async getInterviewList(){
-        let interviewList = await request('/message/getRecruit',{userID:"123455a"})
+        let interviewList = await request('/message/getRecruit',{userID:"oVes-48ZmdjSke7_TKGsBHJ2g8fc"})
         this.setData({
             interviewList
         })
@@ -41,9 +41,10 @@ Page({
         this.getInterviewList()
     },
     // 前往聊天页面
-    tojobChat(){
+    tojobChat(event){
+        let {info} = event.currentTarget.dataset;
         wx.navigateTo({
-          url: '/pages/jobChat/jobChat',
+          url: '/pages/jobChat/jobChat?otherID=' +  info.otherID
         })
     },
 

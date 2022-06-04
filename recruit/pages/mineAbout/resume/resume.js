@@ -1,4 +1,5 @@
 // pages/mineAbout/resume/resume.js
+//var avatarUrl = '';
 import upload from '../../../utils/upload'
 Page({
 
@@ -161,41 +162,69 @@ Page({
         radio: event.detail,
       });
     },
-  
+   // 选择图片
+   selectImage(){
+    var that = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success (res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        let avatarUrl = res.tempFilePaths[0]
+        console.log(avatarUrl)
+        that.setData({
+          value_Avatal:avatarUrl
+        })
+      }
+    })
+  },
     // 申请确认
     application(){
-      // let {value_realName,value_Phone,value_Position,radio,value_Year,value_Education,value_Time,value_Protect} = this.data
-      // // 手机号验证
-      // if(!value_Phone){
-      //   //提示用户
-      //   wx.showToast({
-      //     title: '手机号为空',
-      //     icon: 'error'
-      //   })
-      //   this.setData({
-      //     is_ok:false
-      //   })
-      //   return;
-      //  }
-      //  //定义正则表达式
-      //  let phoneNumReg = /^1(3|4|5|6|7|8|9)\d{9}$/;
-      //  if(!phoneNumReg.test(value_Phone)){
-      //   wx.showToast({
-      //     title: '手机号格式错误',
-      //     icon: 'error'
-      //   })
-      //   this.setData({
-      //     is_ok:false
-      //   })
-      //   return;
-      //  }else{
-      //    this.setData({
-      //      is_ok:true
-      //    })
-      //  }
-      
-       this.uploadResume()
-       console.log("点击成功")
+      let {value_Avatal,value_realName,value_Phone,value_Position,radio,value_Year,value_Education,value_Time,value_Protect} = this.data
+      // 手机号验证
+      if(!value_Phone){
+        //提示用户
+        wx.showToast({
+          title: '手机号为空',
+          icon: 'error'
+        })
+        this.setData({
+          is_ok:false
+        })
+        return;
+       }
+       //定义正则表达式
+       let phoneNumReg = /^1(3|4|5|6|7|8|9)\d{9}$/;
+       if(!phoneNumReg.test(value_Phone)){
+        wx.showToast({
+          title: '手机号格式错误',
+          icon: 'error'
+        })
+        this.setData({
+          is_ok:false
+        })
+        return;
+       }else{
+         this.setData({
+           is_ok:true
+         })
+       }
+       let resumeList = [{
+       avatarUrl:value_Avatal,
+       realName: value_realName,
+       phoneNum: value_Phone,
+       position: value_Position,
+       radio: radio,
+       brithYear: value_Year,
+       education: value_Education,
+       workYear: value_Time,
+       privacy: value_Protect
+       }
+       ]
+       wx.setStorageSync('resume', resumeList)
+       //this.uploadResume()
+       //console.log("点击成功")
     },
     async uploadResume(){
       await upload('/user/createResume',{userID:'123',realName:'冯子豪',phoneNum:'18668218627',birthYear:'1999年',education:'高中',workYear:'1-3年',intentionJob:'司机',privacy:'1'})
@@ -207,7 +236,18 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      let resumeList = wx.getStorageSync('resume')
+      this.setData({
+      value_Avatal:resumeList[0].avatarUrl,
+      value_realName:resumeList[0].realName,
+      value_Phone:resumeList[0].phoneNum,
+      value_Position:resumeList[0].position,
+      radio:resumeList[0].radio,
+      value_Year:resumeList[0].workYear,
+      value_Education:resumeList[0].education,
+      value_Time:resumeList[0].birthYear,
+      value_Protect:resumeList[0].privacy
+      })
     },
 
     /**
