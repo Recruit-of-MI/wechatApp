@@ -1,25 +1,33 @@
 <!--pages/PositionAbout/fjjz/fjjz.wxml-->
 <scroll-view class="scrollContaier" scroll-y="true" scroll-top="true" >
         <!-- 一个例子 -->
-            <view class="scrollItem" wx:for="{{5}}" bindtap="tojobDetail">
-                <text class="scrollItemText">恒生电子软件工程师</text>
+        <view class="scrollItem" wx:for="{{jobList}}" bindtap="tojobDetail" data-index="{{index}}" data-job="{{item}}">
+                <text class="scrollItemText">{{item.jobTitle}}</text>
                 <view class="scrollItemCon1">
-                    <text class="scrollItemCon1Text1">16000-32000元</text>
-                    <text class="scrollItemCon1Text2">·销售代表</text>
-                    <text class="scrollItemCon1Text3">江干区·学正街</text>
+                    <text class="scrollItemCon1Text1">{{item.minWages}}-{{item.maxWages}}</text>
+                    <text class="scrollItemCon1Text2">·{{item.recruitPosition}}</text>
                 </view>
+                <text class="scrollItemCon1Text3">{{item.region}}·{{item.specificLocation}}</text>
                 <!-- 标签 -->
                 <view class="scrollItemCon2">
-                    <view class="scrollItemBack">
-                        <text class="scrollItemBackText">广告</text>
+                    <view wx:if="{{item.label1}}" class="scrollItemBack">
+                        <text class="scrollItemBackText">{{item.label1}}</text>
+                    </view>
+                    <view wx:if="{{item.label2}}" class="scrollItemBack">
+                        <text class="scrollItemBackText">{{item.label2}}</text>
+                    </view>
+                    <view wx:if="{{item.label3}}" class="scrollItemBack">
+                        <text class="scrollItemBackText">{{item.label3}}</text> 
                     </view>
                 </view>
                 <!-- 公司信息 -->
                 <view class="scrollItemCon3">
-                    <text class="scrollItemCon3Text1">杭州恒生电子有限公司</text>
+                    <text class="scrollItemCon3Text1">{{item.corporateName}}</text>
                     <view class="scrollItemCon3Back">
                         <text class="scrollItemCon3BackText">名企</text>
                     </view>
                 </view>
+                 <!-- 分割线 -->
+                <view class="line"></view>
             </view>
 </scroll-view>

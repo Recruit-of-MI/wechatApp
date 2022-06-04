@@ -48,7 +48,7 @@ Page({
           
         }
         wx.navigateTo({
-          url: '/pages/PositionAbout/searchDetail/searchDetail',
+          url: '/pages/PositionAbout/searchDetail/searchDetail?jobKeyWord=' + value
         })
       
       },

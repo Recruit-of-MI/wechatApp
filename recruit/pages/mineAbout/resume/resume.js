@@ -45,6 +45,7 @@ Page({
         ],
         option3: [
           { text: '工作时间', value: 'c' },
+          { text: '0-1年', value: '0-1年' },
           { text: '1-3年', value: '1-3年' },
           { text: '3-5年', value: '3-5年' },
           { text: '3-10年', value: '3-10年' },
@@ -52,8 +53,8 @@ Page({
         ],
         option4: [
           { text: '隐私保护', value: 'd' },
-          { text: '所有招聘方', value: '所有招聘方' },
-          { text: '特定招聘方', value: '特定招聘方' },
+          { text: '所有招聘方', value: '1' },
+          { text: '特定招聘方', value: '0' },
         ],
         value1: 'a',
         value2: 'b',
@@ -223,11 +224,14 @@ Page({
        }
        ]
        wx.setStorageSync('resume', resumeList)
-       //this.uploadResume()
-       //console.log("点击成功")
+       this.uploadResume(value_realName,value_Phone,value_Year,value_Education,value_Time, value_Position,value_Protect)
+       wx.reLaunch({
+         url: '/pages/mine/mine',
+       })
     },
-    async uploadResume(){
-      await upload('/user/createResume',{userID:'123',realName:'冯子豪',phoneNum:'18668218627',birthYear:'1999年',education:'高中',workYear:'1-3年',intentionJob:'司机',privacy:'1'})
+    async uploadResume(a,b,c,d,e,f,g){
+      let openId = wx.getStorageSync('openId')
+      await upload('/user/createResume',{userID:openId,realName:a,phoneNum:b,birthYear:c,education:d,workYear:e,intentionJob:f,privacy:g})
       console.log("简历更新成功")
     },
 

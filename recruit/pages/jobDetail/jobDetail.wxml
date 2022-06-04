@@ -26,7 +26,8 @@
                     <text class="JICon3Con1Con2Text1">{{jobDetailList.job.corporateName}}</text>
                 </view>
             </view>
-            <text class="iconfont icon-shoucang1 JICon3Icon" bindtap="collect"></text>
+            <text wx:if="{{jobDetailList.isCollect == false}}" class="iconfont icon-shoucang1 JICon3Icon1" bindtap="collect"></text>
+            <text wx:if="{{jobDetailList.isCollect == true}}" class="iconfont icon-shoucang1 JICon3Icon2" bindtap="collect"></text>
         </view>
         <!-- 分割线 -->
         <view class="jobIntroductionLine"></view>

@@ -1,19 +1,39 @@
-// pages/PositionAbout/mqzq/mqzq.js
+// pages/PositionAbout/fjjz/fjjz.js
+import request from '../../../utils/request'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        // 附近热招
+      jobList:[],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
 
+
+    // 获取附近急招——接口
+    async getJobList(){
+        let jobList = await request('/recruit/getFamousJob')
+        this.setData({
+          jobList: jobList
+        })
+      },
+    onLoad: function (options) {
+        this.getJobList()
     },
+     // 前往工作详情页面
+     tojobDetail(event){
+      let {job} = event.currentTarget.dataset;
+      console.log(job.jobID)
+      wx.navigateTo({
+        url: '/pages/jobDetail/jobDetail?jobID=' + job.jobID
+      })
+    },
+    
 
     /**
      * 生命周期函数--监听页面初次渲染完成

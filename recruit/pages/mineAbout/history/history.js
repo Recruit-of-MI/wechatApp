@@ -1,17 +1,19 @@
-// pages/mineAbout/history/history.js
+// pages/mineAbout/collection/collection.js
+import request from '../../../utils/request'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      jobList:[],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+      this.getJobList()
 
     },
 
@@ -21,6 +23,15 @@ Page({
           url: '/pages/jobDetail/jobDetail',
         })
     },
+    //获取足迹工作列表
+    async getJobList(){
+      let openId = wx.getStorageSync('openId')
+      let jobList = await request('/recruit/getBrowsed',{userID:openId})
+      this.setData({
+        jobList
+      })
+    },
+    
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

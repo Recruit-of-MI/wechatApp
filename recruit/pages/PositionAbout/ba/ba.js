@@ -17,13 +17,21 @@ Page({
 
     // 获取附近急招——接口
     async getJobList(){
-        let jobList = await request('/recruit/getUrgentJob')
+        let jobList = await request('/recruit/getSecurity')
         this.setData({
           jobList: jobList
         })
       },
     onLoad: function (options) {
         this.getJobList()
+    },
+     // 前往工作详情页面
+     tojobDetail(event){
+      let {job} = event.currentTarget.dataset;
+      console.log(job.jobID)
+      wx.navigateTo({
+        url: '/pages/jobDetail/jobDetail?jobID=' + job.jobID
+      })
     },
 
     /**

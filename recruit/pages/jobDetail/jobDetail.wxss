@@ -70,11 +70,18 @@
 .JICon3Con1Con2Text1{
     font-size: 28rpx;
 }
-.JICon3Icon{
+.JICon3Icon1{
 
     font-size: larger;
     margin-top: 50rpx;
     margin-left: 120rpx;
+}
+.JICon3Icon2{
+
+    font-size: larger;
+    margin-top: 50rpx;
+    margin-left: 120rpx;
+    color: #ffa400;
 }
 .jobIntroductionLine{
     margin-top: 30rpx;

@@ -1,4 +1,4 @@
-/* pages/mineAbout/history/history.wxss *//* pages/PositionAbout/fjjz/fjjz.wxss */
+/* pages/PositionAbout/fjjz/fjjz.wxss */
 .scrollContaier{
     margin-top: 30rpx;
     height: 100%;
@@ -30,9 +30,12 @@
 }
 .scrollItemCon1Text3{
     font-size: 24rpx;
-    margin-left: 140rpx;
+    margin-left: 30rpx;
     margin-top: 15rpx;
-    color: #000;
+    color: rgb(235, 104, 104);
+}
+.scrollItemCon2{
+    display: flex;
 }
 .scrollItemBack{
     display: flex;
@@ -71,4 +74,11 @@
     font-size: 24rpx;
     margin-left: 6rpx;
     color: #D5C621;
+}
+.line{
+    margin-top: 30rpx;
+    width:90%;
+    margin-left: 5%;
+    height:2rpx;
+    background:#d3d1d1;
 }

@@ -19,6 +19,7 @@ Page({
       let jobID = options.jobID
       this.getJobDetailList(jobID)
       this.getIsagree(jobID)
+      this.uploadBrowse(jobID)
 
     },
 
@@ -29,6 +30,12 @@ Page({
       let openId = wx.getStorageSync('openId')
       let jobList = this.data.jobDetailList
       await upload('/recruit/createCollect',{userID:openId,jobID:jobList.job.jobID})
+    },
+
+    //添加足迹
+    async uploadBrowse(jobID){
+      let openId = wx.getStorageSync('openId')
+      await upload('/recruit/createBrowsed',{userID:openId,jobID})
     },
 
     // 前往聊天页面

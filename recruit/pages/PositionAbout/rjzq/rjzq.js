@@ -25,6 +25,14 @@ Page({
     onLoad: function (options) {
         this.getJobList()
     },
+     // 前往工作详情页面
+     tojobDetail(event){
+      let {job} = event.currentTarget.dataset;
+      console.log(job.jobID)
+      wx.navigateTo({
+        url: '/pages/jobDetail/jobDetail?jobID=' + job.jobID
+      })
+    },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
