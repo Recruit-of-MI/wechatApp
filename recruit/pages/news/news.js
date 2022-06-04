@@ -21,14 +21,16 @@ Page({
 
     //  获取应聘消息列表
     async getApplyList(){
-        let applyList = await request('/message/getApply',{userID:"oVes-48ZmdjSke7_TKGsBHJ2g8fc"})
+        let openId = wx.getStorageSync('openId')
+        let applyList = await request('/message/getApply',{userID:openId})
         this.setData({
             applyList
         })
     },
     //  获取面试消息列表
     async getInterviewList(){
-        let interviewList = await request('/message/getRecruit',{userID:"oVes-48ZmdjSke7_TKGsBHJ2g8fc"})
+        let openId = wx.getStorageSync('openId')
+        let interviewList = await request('/message/getRecruit',{userID:openId})
         this.setData({
             interviewList
         })
@@ -77,6 +79,7 @@ Page({
         //     isChecked2:false
         // })
         this.getApplyList()
+        this.getInterviewList()
     },
 
     /**

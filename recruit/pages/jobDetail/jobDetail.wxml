@@ -26,7 +26,7 @@
                     <text class="JICon3Con1Con2Text1">{{jobDetailList.job.corporateName}}</text>
                 </view>
             </view>
-            <text class="iconfont icon-shoucang1 JICon3Icon"></text>
+            <text class="iconfont icon-shoucang1 JICon3Icon" bindtap="collect"></text>
         </view>
         <!-- 分割线 -->
         <view class="jobIntroductionLine"></view>

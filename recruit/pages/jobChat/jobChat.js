@@ -63,7 +63,9 @@ Page({
 
     //聊天消息获取
     async getMsgList(){
-      let msgList = await request('/message/getChat',{userID: "oVes-48ZmdjSke7_TKGsBHJ2g8fc",otherID: "123455a"})
+      let otherId = this.data.otherID
+      let openId = wx.getStorageSync('openId')
+      let msgList = await request('/message/getChat',{userID: openId,otherID: otherId})
       this.setData({
         msgList
       })

@@ -24,6 +24,12 @@ Page({
 
     //申请聊天
 
+    //点击收藏
+    async collect(){
+      let openId = wx.getStorageSync('openId')
+      let jobList = this.data.jobDetailList
+      await upload('/recruit/createCollect',{userID:openId,jobID:jobList.job.jobID})
+    },
 
     // 前往聊天页面
     async tojobChat(){
@@ -39,10 +45,22 @@ Page({
           url: '/pages/news/news',
         })
     },
+    //投递工作
+    async applyJob(){
+      let jobList = this.data.jobDetailList
+      let openId = wx.getStorageSync('openId')
+      let userInfo = wx.getStorageSync('userinfo')
+      await upload('/recruit/createDelivered',{jobID:jobList.job.jobID,userID:openId,userName:userInfo.nickName})
+      wx.navigateTo({
+        url: '/pages/mineAbout/delivered/delivered',
+      })
+
+    },
 
     // 获取工作详情
     async getJobDetailList(JobID){
-      let jobDetailList = await request('/recruit/getSpecificJobOfUser',{JobID:JobID,userID:'123455a'})
+      let openId = wx.getStorageSync('openId')
+      let jobDetailList = await request('/recruit/getSpecificJobOfUser',{JobID:JobID,userID:openId})
       this.setData({
         jobDetailList
       })

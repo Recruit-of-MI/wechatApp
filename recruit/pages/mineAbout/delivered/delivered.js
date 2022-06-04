@@ -25,7 +25,8 @@ Page({
     },
     //获取已投递列表
     async getDeliverList(){
-      let deliverList = await request('/recruit/getDelivered',{userID:'deliver1'})
+      let openId = wx.getStorageSync('openId')
+      let deliverList = await request('/recruit/getDelivered',{userID:openId})
       this.setData({
         deliverList
       })

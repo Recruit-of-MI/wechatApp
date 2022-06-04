@@ -163,4 +163,8 @@
   />
 </van-cell-group>
 </van-cell-group>
-
+<view class="application">
+        <view class="applicationCon2" bindtap="createJob">
+            <text class="applicationCon2Text1">完成创建</text>
+        </view>
+</view>

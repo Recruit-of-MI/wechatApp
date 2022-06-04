@@ -77,9 +77,13 @@ Page({
             })
           }
           let userInfo = wx.getStorageSync('userinfo')
+          console.log("userInfo:")
+          console.log(userInfo)
           if(userInfo){
             let openId = wx.getStorageSync('openId')
             this.uploadUserInfo(openId,userInfo.nickName,userInfo.avatarUrl)
+            console.log("上传成功")
+            
           }
         //   ——————————————————————————————
 
@@ -143,7 +147,14 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      let userInfo = wx.getStorageSync('userinfo')
+      console.log("userInfo:")
+      console.log(userInfo)
+      if(userInfo){
+        let openId = wx.getStorageSync('openId')
+        this.uploadUserInfo(openId,userInfo.nickName,userInfo.avatarUrl)
+        console.log("上传成功")
+      }
     },
 
     /**

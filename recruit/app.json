@@ -1,19 +1,28 @@
 {
     "pages": [
         "pages/position/position",
-        "pages/jobDetail/jobDetail",
-        "pages/news/news",
+        "pages/mineAbout/collection/collection",
         "pages/mine/mine",
+        "pages/mineAbout/delivered/delivered",
+        
+        "pages/mineAbout/zhaoren/zhaoren",
+        
+   
+        "pages/news/news",
+        
+        "pages/jobDetail/jobDetail",
+
+    
         "pages/mineAbout/resume/resume",
        
-        "pages/mineAbout/delivered/delivered",
+     
         "pages/mineAbout/published/published", 
         "pages/mineAbout/deliveredDetail/deliveredDetail",
         "pages/mineAbout/publishedDetail/publishedDetail",
         
 
    
-        "pages/mineAbout/zhaoren/zhaoren",
+    
         "pages/index/index",
         "pages/jobChat/jobChat",
         "pages/jobChat_copy/jobChat_copy",
@@ -30,7 +39,7 @@
         "pages/PositionAbout/rjzq/rjzq",
         "pages/PositionAbout/sshb/sshb",
         "pages/PositionAbout/mqzq/mqzq",
-        "pages/mineAbout/collection/collection",
+       
         "pages/PositionAbout/sj/sj",
         "pages/PositionAbout/ba/ba",
         "pages/PositionAbout/wmy/wmy",
