@@ -52,6 +52,27 @@
     width: 100rpx;
     background-color: #3399ff;
 }
+.MLCon5{
+    display: flex;
+    margin-left: 90rpx;
+    margin-top: 40rpx;
+    border-radius: 20rpx;
+    display: flex;
+    height: 50rpx;
+    width: 150rpx;
+    background-color: #ff3300;
+}
+.MLCon6{
+    display: flex;
+    margin-left: 40rpx;
+    margin-top: 40rpx;
+    border-radius: 20rpx;
+    display: flex;
+    height: 50rpx;
+    width: 130rpx;
+    background-color: #00cc00;
+}
+
 .MLCon2Text1{
     color: #fff;
     font-weight: 600;

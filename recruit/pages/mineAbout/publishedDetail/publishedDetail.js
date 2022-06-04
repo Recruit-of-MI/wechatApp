@@ -1,5 +1,6 @@
 // pages/mineAbout/publishedDetail/publishedDetail.js
 import request from '../../../utils/request'
+import upgrate from '../../../utils/upgrate'
 Page({
 
     /**
@@ -28,6 +29,22 @@ Page({
         userList
       })
    },
+
+    //拒绝
+    async refuse(event){
+      let jobID = this.data.jobID
+      let {index} = event.currentTarget.dataset;
+      let userID = this.data.userList[index].user.userID
+      await upgrate('/recruit/disagreeDeliver',{jobID,userID})
+    },
+
+    //接收
+    async accept(event){
+      let jobID = this.data.jobID
+      let {index} = event.currentTarget.dataset;
+      let userID = this.data.userList[index].user.userID
+      await upgrate('/recruit/agreeDeliver',{jobID,userID})
+    },
      // 前往聊天页面
      tojobChat(event){
       let {index} = event.currentTarget.dataset;

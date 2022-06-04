@@ -6,14 +6,20 @@
     <!-- 昵称 -->
     <view class="MLCon1">
         <text class="MLCon1Text1">{{item.user.userName}}</text>
-        <view class="MLCon2">
-            <text class="MLCon2Text1">拒绝</text>
+        <view wx:if="{{item.isAgree == 0}}" class="MLCon2">
+            <text class="MLCon2Text1" data-index="{{index}}" bindtap="refuse">拒绝</text>
         </view>
-        <view class="MLCon3">
-            <text class="MLCon2Text1">接收</text>
+        <view  wx:if="{{item.isAgree == 0}}" class="MLCon3">
+            <text class="MLCon2Text1" data-index="{{index}}" bindtap="accept">接收</text>
         </view>
         <view class="MLCon4">
             <text class="MLCon2Text1" data-index="{{index}}" bindtap="tojobChat">聊天</text>
+        </view>
+        <view wx:if="{{item.isAgree == 2}}" class="MLCon5">
+            <text class="MLCon2Text1" data-index="{{index}}">已拒绝</text>
+        </view>
+        <view  wx:if="{{item.isAgree == 1}}" class="MLCon6">
+            <text class="MLCon2Text1" data-index="{{index}}" >已接收</text>
         </view>
     </view>
     </view>
