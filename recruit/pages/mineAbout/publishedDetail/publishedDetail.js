@@ -1,26 +1,41 @@
 // pages/mineAbout/publishedDetail/publishedDetail.js
+import request from '../../../utils/request'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      jobID:'',
+      userList:[]
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      let jobID = options.jobID
+      console.log(jobID)
+      this.setData({
+        jobID
+      })
+      this.getDeliveredForJob(jobID)
     },
 
-    // 前往聊天页面
-    tojobChat(){
-        wx.navigateTo({
-          url: '/pages/jobChat/jobChat',
-        })
-    },
+   async getDeliveredForJob(jobID){
+      let userList = await request('/recruit/getDeliveredForJob',{jobID})
+      this.setData({
+        userList
+      })
+   },
+     // 前往聊天页面
+     tojobChat(event){
+      let {index} = event.currentTarget.dataset;
+       let otherID = this.data.userList[index].user.userID
+      wx.navigateTo({
+        url: '/pages/jobChat/jobChat?otherID=' +  otherID
+      })
+  },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

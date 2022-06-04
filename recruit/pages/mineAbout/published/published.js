@@ -17,15 +17,17 @@ Page({
     },
 
     // 前往已发布详情页面
-    publishedDetail(){
+    publishedDetail(event){
+      let {job} = event.currentTarget.dataset;
         wx.navigateTo({
-          url: '/pages/mineAbout/publishedDetail/publishedDetail',
+          url: '/pages/mineAbout/publishedDetail/publishedDetail?jobID=' + job.jobID
         })
     },
 
     //获取已发布列表
     async getPublishList(){
-      let publishList = await request('/recruit/getSend',{userID:"123455a"})
+      let openId = wx.getStorageSync('openId')
+      let publishList = await request('/recruit/getSend',{userID:openId})
       this.setData({
         publishList
       })

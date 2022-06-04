@@ -1,11 +1,11 @@
-<view  wx:for="{{3}}">
-    <view class="messageListContainer" bindtap="tojobChat">
+<view  wx:for="{{userList}}" >
+    <view class="messageListContainer"  >
     <!-- 头像 -->
-    <image class="messageListContainerAvatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/n7pl10NRqpZqvNhQKtOQwlyUqmjB1RY2obJh0g5Cic4WRfFNx5mxAjchpMYbTsKpJIqW9jnIOfQJKqF3USxSULg/132">
+    <image class="messageListContainerAvatar" src="{{item.user.avatarUrl}}">
     </image>
     <!-- 昵称 -->
     <view class="MLCon1">
-        <text class="MLCon1Text1">张三</text>
+        <text class="MLCon1Text1">{{item.user.userName}}</text>
         <view class="MLCon2">
             <text class="MLCon2Text1">拒绝</text>
         </view>
@@ -13,7 +13,7 @@
             <text class="MLCon2Text1">接收</text>
         </view>
         <view class="MLCon4">
-            <text class="MLCon2Text1">聊天</text>
+            <text class="MLCon2Text1" data-index="{{index}}" bindtap="tojobChat">聊天</text>
         </view>
     </view>
     </view>

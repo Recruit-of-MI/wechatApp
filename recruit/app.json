@@ -1,16 +1,18 @@
 {
     "pages": [
         "pages/mine/mine",
+        "pages/mineAbout/published/published", 
+        "pages/mineAbout/delivered/delivered", 
+        
         "pages/mineAbout/resume/resume",
         "pages/position/position",
         "pages/mineAbout/collection/collection",
         
-        "pages/mineAbout/delivered/delivered", 
+       
         "pages/mineAbout/zhaoren/zhaoren",
         "pages/news/news", 
         "pages/jobDetail/jobDetail",
- 
-        "pages/mineAbout/published/published", 
+
         "pages/mineAbout/deliveredDetail/deliveredDetail",
         "pages/mineAbout/publishedDetail/publishedDetail",
         "pages/index/index",

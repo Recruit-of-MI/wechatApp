@@ -1,6 +1,6 @@
 <!--pages/mineAbout/delivered/delivered.wxml-->
 <view class="published">
-    <scroll-view class="publishedScroll" wx:for="{{publishList}}" bindtap="publishedDetail">
+    <scroll-view class="publishedScroll" wx:for="{{publishList}}" bindtap="publishedDetail" data-index="{{index}}" data-job="{{item}}">
         <view class="publishedCon1">
         <text class="publishedCon1Text1">{{item.corporateName}}</text>
         <text class="publishedCon1Text2">{{item.region}}·{{item.specificLocation}}</text>
