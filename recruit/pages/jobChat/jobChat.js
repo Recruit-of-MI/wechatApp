@@ -79,9 +79,15 @@ Page({
       let otherUserList = this.data.otherUserList
      // let 
       //对方ID
-     
-      await upload('/message/createChat',{userID:openId,otherID:otherID,userName:userInfo.nickName,avatarUrl:userInfo.avatarUrl,otherUserName:otherUserList.userName,otherAvatarUrl:otherUserList.avatarUrl,speaker:openId,contentType:'text',content:content})
-      console.log("上传成功")
+      console.log(flag)
+      if(flag == false){
+        await upload('/message/createChat',{userID:openId,otherID:otherID,userName:userInfo.nickName,avatarUrl:userInfo.avatarUrl,otherUserName:otherUserList.userName,otherAvatarUrl:otherUserList.avatarUrl,speaker:openId,contentType:'text',content:content})
+        console.log("上传成功")
+      }else if(flag == true){
+        await upload('/message/createChat',{userID:openId,otherID:otherID,userName:userInfo.nickName,avatarUrl:userInfo.avatarUrl,otherUserName:otherUserList.userName,otherAvatarUrl:otherUserList.avatarUrl,speaker:openId,contentType:'image',content:imageScr})
+        console.log(imageScr)
+      }
+      
     },
 
     //对方信息获取
@@ -91,6 +97,11 @@ Page({
       this.setData({
         otherUserList
       })
+      wx.setNavigationBarTitle({
+
+        title: otherUserList.userName
+        
+        })
     },
 
 
@@ -105,6 +116,7 @@ Page({
           imageScr = res.tempFilePaths[0]
           flag = true;
           console.log(flag)
+          console.log(imageScr)
         }
       })
     },
@@ -123,6 +135,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    
     let openId = wx.getStorageSync('openId')
     this.setData({
       openId
@@ -199,7 +212,7 @@ Page({
    * 发送点击监听
    */
   sendClick: function(e) {
-
+   
     if(flag==true){
       msgList.push({
         speaker: 'customer',
@@ -221,8 +234,10 @@ Page({
         inputVal
       });
     }
-    flag = false
     this.uploadMsg(e.detail.value)
+    this.onLoad()
+    flag = false
+    
 
 
   },

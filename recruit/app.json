@@ -1,5 +1,7 @@
 {
     "pages": [
+        "pages/news/news", 
+        "pages/mineAbout/setting/setting",
         "pages/mine/mine",
         "pages/mineAbout/published/published", 
         "pages/mineAbout/delivered/delivered", 
@@ -10,7 +12,7 @@
         
        
         "pages/mineAbout/zhaoren/zhaoren",
-        "pages/news/news", 
+       
         "pages/jobDetail/jobDetail",
 
         "pages/mineAbout/deliveredDetail/deliveredDetail",
@@ -20,7 +22,7 @@
         "pages/jobChat_copy/jobChat_copy",
         "pages/PositionAbout/fjjz/fjjz",
         "pages/PositionAbout/gxzq/gxzq",
-        "pages/mineAbout/setting/setting",
+     
         "pages/mineAbout/history/history",
         "pages/PositionAbout/search/search",
         "pages/PositionAbout/navigation/navigation",

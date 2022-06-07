@@ -18,9 +18,10 @@ Page({
     },
 
     // 前往已投递详情
-    deliveredDetail(){
+    deliveredDetail(event){
+      let {job} = event.currentTarget.dataset;
         wx.navigateTo({
-          url: '/pages/mineAbout/deliveredDetail/deliveredDetail',
+          url: '/pages/mineAbout/deliveredDetail/deliveredDetail?jobID=' + job.job.jobID ,
         })
     },
     //获取已投递列表

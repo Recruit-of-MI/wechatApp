@@ -1,11 +1,13 @@
 // pages/mineAbout/deliveredDetail/deliveredDetail.js
+import request from '../../../utils/request'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      jobID:'',
+      jobDetailList:[]
     },
 
 
@@ -15,12 +17,32 @@ Page({
           url: '/pages/jobChat/jobChat',
         })
     },
+
+      // 获取工作详情
+      async getJobDetailList(JobID){
+        let openId = wx.getStorageSync('openId')
+        let jobDetailList = await request('/recruit/getSpecificJobOfUser',{JobID:JobID,userID:openId})
+        this.setData({
+          jobDetailList
+        })
+      },
+      tojobChat(){
+        let otherID = this.data.jobDetailList.job.userID
+        wx.navigateTo({
+          url: '/pages/jobChat/jobChat?otherID=' + otherID
+        })
+      },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      let jobID = options.jobID
+      this.setData({
+        jobID
+      })
+      this.getJobDetailList(jobID)
     },
+    
 
     /**
      * 生命周期函数--监听页面初次渲染完成

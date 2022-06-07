@@ -134,6 +134,9 @@ Page({
         let userInfo = wx.getStorageSync('userinfo')
         let {value_title,value_position,value_lowsalary,value_highsalary,value_welfare1,value_welfare2,value_welfare3,value_welfare4,value_welfare5,value_label1,value_label2,value_label3, value_description, value_education,value_mode,value_region,value_place,value_corporateName,value_number} = this.data
         await upload('/recruit/createJob',{recruitPosition:value_position,jobTitle:value_title,maxWages:value_highsalary,minWages:value_lowsalary,region:value_region,specificLocation:value_place,corporateName:value_corporateName,minEducation:value_education,mode:value_mode,userID:openId,publisherName:userInfo.nickName,publisherAvatarUrl:userInfo.avatarUrl,jobDescription:value_description,recruitNum:value_number,welfare1:value_welfare1,welfare2:value_welfare2,welfare3:value_welfare3,welfare4:value_welfare4,welfare5:value_welfare5,label1:value_label1,label2:value_label2,label3:value_label3})
+        wx.reLaunch({
+          url: '/pages/mine/mine',
+        })
       },
     /**
      * 生命周期函数--监听页面加载
