@@ -61,7 +61,6 @@ Page({
       wx.navigateTo({
         url: '/pages/mineAbout/delivered/delivered',
       })
-
     },
 
     // 获取工作详情

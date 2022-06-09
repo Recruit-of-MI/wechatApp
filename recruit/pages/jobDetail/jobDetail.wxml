@@ -46,20 +46,20 @@
     <view class="jobBenefits">
         <text class="JBText1">职位福利</text>
         <view class="JBCon2" >
-            <view wx:if="{{jobDetailList.welfare1}}" class="JBCon1">
+            <view wx:if="{{jobDetailList.job.welfare1}}" class="JBCon1">
                 <text class="JBCon1Text1">{{jobDetailList.job.welfare1}}</text>
             </view>
-            <view wx:if="{{jobDetailList.welfare2}}" class="JBCon1">
+            <view wx:if="{{jobDetailList.job.welfare2}}" class="JBCon1">
                 <text class="JBCon1Text1">{{jobDetailList.job.welfare2}}</text>
             </view>
-            <view wx:if="{{jobDetailList.welfare3}}" class="JBCon1">
+            <view wx:if="{{jobDetailList.job.welfare3}}" class="JBCon1">
                 <text class="JBCon1Text1">{{jobDetailList.job.welfare3}}</text>
             </view>
-            <view wx:if="{{jobDetailList.welfare4}}" class="JBCon1">
+            <view wx:if="{{jobDetailList.job.welfare4}}" class="JBCon1">
                 <text class="JBCon1Text1">{{jobDetailList.job.welfare4}}</text>
             </view>
         </view>
-        <view wx:if="{{jobDetailList.welfare5}}" class="JBCon2" >
+        <view wx:if="{{jobDetailList.job.welfare5}}" class="JBCon2" >
             <view class="JBCon1">
                 <text class="JBCon1Text1">{{jobDetailList.job.welfare5}}</text>
             </view>

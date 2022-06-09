@@ -235,6 +235,7 @@ Page({
       });
     }
     this.uploadMsg(e.detail.value)
+    this.getMsgList()
     this.onLoad()
     flag = false
     

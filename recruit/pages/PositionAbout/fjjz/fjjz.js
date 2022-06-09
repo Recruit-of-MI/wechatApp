@@ -17,7 +17,8 @@ Page({
 
     // 获取附近急招——接口
     async getJobList(){
-        let jobList = await request('/recruit/getHotJob',{region:'上城区'})
+      let place = wx.getStorageSync('currentPlace')
+        let jobList = await request('/recruit/getHotJob',{region:place})
         this.setData({
           jobList: jobList
         })

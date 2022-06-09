@@ -45,6 +45,7 @@ Page({
     // 前往聊天页面
     tojobChat(event){
         let {info} = event.currentTarget.dataset;
+        console.log(info)
         wx.navigateTo({
           url: '/pages/jobChat/jobChat?otherID=' +  info.otherID
         })

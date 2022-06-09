@@ -18,9 +18,10 @@ Page({
     },
 
     // 前往工作详情页面
-    tojobDetail(){
+    tojobDetail(event){
+      let {job} = event.currentTarget.dataset;
         wx.navigateTo({
-          url: '/pages/jobDetail/jobDetail',
+          url: '/pages/jobDetail/jobDetail?jobID=' + job.jobID ,
         })
     },
     //获取收藏工作列表
